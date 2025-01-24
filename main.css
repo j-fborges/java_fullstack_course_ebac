@@ -1,0 +1,254 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+
+.patua-one-regular {
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.petit-formal-script-regular {
+    font-family: "Petit Formal Script", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+body, inputs, textarea {
+    font-family: "Patua One", serif;
+}
+
+header h1, section h2, section h3, button {
+    font-family: "Petit Formal Script", serif;
+    font-weight: 500;
+    font-weight: normal;
+    color: #3a1c04
+}
+
+
+
+header {
+    padding: 32px 0;
+    background-color: #cce685;
+    color: whitesmoke;
+    width: 100%
+}
+
+header h1 {
+    margin-bottom: 40px;
+    font-size: 42px;
+    /* width: 100%; */
+    font-weight: 600;
+    margin-right: 64px;
+    margin-left: 120px;
+}
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+header nav li a {
+    color: #3a1c04;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container,
+section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container {
+    align-items: flex-bottom;
+    justify-content: flex-start;
+    margin: 0 0 0 64px;
+    width: 100%;
+    max-width: none;
+
+}
+
+.banner-div {
+    width: 100;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    overflow: hidden
+}
+.banner{
+    height: 800px;
+    position: relative;
+    bottom: 80px
+}
+
+.banner-paragraph {
+    position: absolute;
+
+    top: 200px;
+    left: 180px;
+    width: 1000px;
+    z-index: 10;
+    font-size: 32px
+}
+
+.brands-list img {
+    height: 24px;
+}
+
+.brands-list li {
+    display: inline;
+}
+
+section .container {
+    align-items: flex-start
+}
+
+section {
+    padding: 24px 0;
+    background-color: bisque;
+}
+
+/* .first-section {
+    background-color: #e79169;
+} */
+
+section h2 {
+    margin-bottom: 8px;
+    color: #3a1c04
+}
+
+
+section img .store-front{
+    margin-right: 32px;
+}
+
+.store-front {
+    margin-right: 32px; 
+    height: 300px
+}
+
+section img .store-front2{
+    margin-left: 32px;
+}
+
+.store-front2 {
+    margin-left: 32px; 
+    height: 300px
+}
+
+.social-links img{
+    height: 24px;
+}
+
+.social-links li{
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-links li a {
+    text-decoration: none;
+}
+
+/* #about {
+    background-color: aquamarine;
+    } */
+    
+    #contact .container{
+        display: block;
+        /* background-color: aliceblue; */
+    }
+    
+    div.contact-methods {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-methods h3 {
+    font-weight: 500;
+    font-weight: normal;
+    color: #3a1c04
+}
+
+form input,
+form textarea,
+form button{
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px
+}
+
+form textarea {
+    resize: none;
+    height:180px
+}
+
+section h3{
+    margin-bottom:16px
+}
+
+form button {
+    background-color: #3a1c04;
+    color: whitesmoke;
+    border: none;
+    
+}
+
+form button:hover{
+    background-color: darkorange;
+    cursor:pointer;
+}
+
+input:focus, textarea:focus {
+    outline-color: darkorange;
+}
+
+footer {
+    background-color: #cce685;
+    color: whitesmoke;
+    padding: 16px 0
+}
+
+footer div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto
+}
+
+#contact {
+    justify-content: flex-start;
+}
+
+#contact .container{
+    align-items: flex-start;
+    max-width: 1450px;
+}
+.about-text {
+    padding-right: 36px;
+    max-width: 100px;
+    overflow: hidden;
+}
+
+div.contact-methods {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 36px;
+    flex-direction: column;
+
+}
