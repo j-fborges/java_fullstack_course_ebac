@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de contatos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./images/telefone.png" alt="telefone" />
+        <h1>Lista de contatos</h1>
+        <br>
+        <div id="greetDiv"></div>
+      </header>
+      <form id="form-atividade">
+        <div>
+          <label for="nome-contato">
+            Nome:
+          </label>
+          <input type="text" id="nome-contato" required placeholder="Nome do contato" />
+        </div>
+        <div>
+          <label for="telefone-contato">
+            Telefone:
+          </label>
+          <input
+            id="telefone-contato"
+            type="tel"
+            required
+            placeholder="(xx) x xxxx-xxxx"
+            maxlength="16"
+          />
+        </div>
+        <button type="submit">Adicionar +</button>
+      </form>
+      <table cellspacing="0">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+
+            <!-- <td>atividade 1</td>
+            <td>7</td>
+            <td><img src="./images/aprovado.png" alt="Emoji festejando" /></td> -->
+          </tr>
+        </tbody>
+        <!-- <tfoot>
+          <tr>
+            <td>Média final</td>
+            <td id="media-final-valor">---</td>
+            <td id="media-final-resultado">---</td>
+          </tr>
+        </tfoot> -->
+      </table>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
