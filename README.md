@@ -1,1 +1,3 @@
-# Java Fullstack Java Course - EBAC
+# Java Fullstack Development Course - EBAC
+
+## Repository for exercises deliveries
