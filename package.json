@@ -1,0 +1,15 @@
+{
+  "name": "20_css_clean_code",
+  "version": "1.0.0",
+  "description": "## Repository for exercises deliveries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass ./source/styles/main.scss:./build/styles/main.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
