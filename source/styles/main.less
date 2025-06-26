@@ -33,30 +33,30 @@ header {
   left: 0;
 
   .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
   }
 }
 
 @media screen and (@max1023) {
   .container {
-      max-width: 80%;
+    max-width: 80%;
   }
 
   .products {
-      grid-template-columns: repeat(2, 48.5%);
-      column-gap: 3%;
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
   }
 }
 
 @media screen and (@max767) {
   .products {
-      display: block;
+    display: block;
 
-      .product-item  {
-          margin-bottom: 32px;
-      }
+    .product-item {
+      margin-bottom: 32px;
+    }
   }
 }
