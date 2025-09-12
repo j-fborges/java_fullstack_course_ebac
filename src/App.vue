@@ -31,7 +31,7 @@ function setResult() {
     <div
       class="flex flex-col justify-center items-center p-12 gap-6 bg-[#eee] rounded-3xl w-[100%] max-w-[500px] self-center"
     >
-      <h1 class="text-3xl font-extrabold">Aritmetics calculator</h1>
+      <h1 class="text-3xl font-extrabold">Arithmetics calculator</h1>
 
       <div class="flex flex-row items-center gap-6">
         <label for="operation" class="text-lg font-bold">Operation: </label>
