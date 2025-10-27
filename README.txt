@@ -1,10 +1,13 @@
-
+Respostas as perguntas do módulo:
 
 ##1.
 
 A programação procedural é um paradigma de programação baseado em procedimentos, também chamados de rotinas ou funções. Ela surgiu como uma evolução da programação puramente sequencial, permitindo que o código fosse dividido em partes menores e reutilizáveis. O nome “procedural” vem do fato de que o foco está nos procedimentos — blocos de código que executam uma sequência de instruções. Nesse modelo, o programa é estruturado como uma série de passos que manipulam dados e executam ações, seguindo uma lógica linear e controlada por funções. Linguagens como C e Pascal são exemplos clássicos de linguagens procedurais.
+
 A programação orientada a objetos (POO), por sua vez, representa uma mudança de foco: em vez de organizar o código em torno de funções e procedimentos, ela o organiza em torno de objetos — entidades que combinam dados (atributos) e comportamentos (métodos). Esse paradigma surgiu para lidar com sistemas cada vez mais complexos, oferecendo uma maneira de modelar o mundo real no código, criando classes e instâncias que representam coisas e suas interações. O nome “orientada a objetos” vem justamente dessa ideia de que tudo gira em torno de objetos que interagem entre si.
+
 No contexto da linguagem Java, a evolução histórica desses paradigmas é evidente. O Java foi projetado desde o início (em meados da década de 1990) como uma linguagem orientada a objetos, influenciada fortemente por C++ e Smalltalk. No entanto, ele herda elementos da programação estrutural e procedural por meio de sua sintaxe semelhante à do C. Isso significa que, embora o foco principal de Java seja a POO, seus blocos de controle, funções auxiliares e organização sequencial do código ainda seguem os princípios estruturais e procedurais. Com o tempo, a orientação a objetos se tornou o paradigma dominante em Java, e é amplamente utilizada tanto em aplicações desktop quanto em sistemas empresariais e aplicativos Android.
+
 Por fim, dentro da programação orientada a objetos, as funções recebem o nome de métodos porque estão associadas a um objeto ou classe. Diferente de uma função comum (que pode existir sozinha), um método é sempre parte de um contexto — ele descreve o comportamento de um objeto, ou seja, o que aquele objeto “sabe fazer”. O termo “método” vem da ideia de que é um método de operação de um objeto, um procedimento pertencente a ele. Assim, quando chamamos um método, estamos instruindo o objeto a executar uma de suas próprias ações. Isso reflete o princípio central da POO: encapsular dados e comportamentos dentro de entidades coesas e autônomas.
 
 ##2.
