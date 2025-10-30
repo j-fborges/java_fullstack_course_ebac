@@ -1,0 +1,19 @@
+import br.com.j_fborges.NameSorter;
+
+/**
+ *
+ */
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello and welcome, Lets sort names");
+
+        NameSorter sorter = new NameSorter();
+
+        sorter.loadNames();
+        sorter.sortAnPrintNames();
+        sorter.printMasculineNames();
+        sorter.printFeminineNames();
+    }
+}
+
