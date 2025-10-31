@@ -1,5 +1,5 @@
 ### IntelliJ IDEA ###
-tarefa_coleçoes/out/
+tarefa_herança/out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .idea
