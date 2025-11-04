@@ -1,0 +1,44 @@
+### IntelliJ IDEA ###
+tarefa_herança/out/
+!padroes_de_projeto_1/src/main/**/out/
+!padroes_de_projeto_1/src/test/**/out/
+.idea
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!padroes_de_projeto_1/src/main/**/bin/
+!padroes_de_projeto_1/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+/build/
