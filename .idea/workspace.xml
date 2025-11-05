@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f50716d4-dc56-42d6-b67a-cf844ada907a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/generics/src/br/com/j_fborges/CivicCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generics/src/br/com/j_fborges/MilleCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4_IDE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/4_IDE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/padroes_de_projeto_1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/generics/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/padroes_de_projeto_1/src/br/com/j_fborges/AbstractCarFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/padroes_de_projeto_1/src/br/com/j_fborges/Brasilia.java" beforeDir="false" afterPath="$PROJECT_DIR$/generics/src/br/com/j_fborges/BrasiliaCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/padroes_de_projeto_1/src/br/com/j_fborges/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/generics/src/br/com/j_fborges/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/padroes_de_projeto_1/src/br/com/j_fborges/CommercialFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/padroes_de_projeto_1/src/br/com/j_fborges/CorolaCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/generics/src/br/com/j_fborges/CorolaCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/padroes_de_projeto_1/src/br/com/j_fborges/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/padroes_de_projeto_1/src/br/com/j_fborges/PartnerFactory.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;j-fborges&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:j-fborges/java_fullstack_course_ebac.git&quot;,
+    &quot;accountId&quot;: &quot;724abc8b-a34f-4cc2-adb2-636844db3352&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="34XTxYaQTL34aAdTFdE2BdXHkvu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Application.Main.executor": "Run",
+    "Application.PrimeiraClasse.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "java__generics",
+    "onboarding.tips.debug.path": "//wsl.localhost/Ubuntu3/home/study/ebac/fullStackJava/backEnd/4_IDE/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu3\home\study\ebac\fullStackJava\backEnd\4_IDE\padroes_de_projeto_1" />
+      <recent name="\\wsl.localhost\Ubuntu3\home\study\ebac\fullStackJava\backEnd\4_IDE\" />
+      <recent name="\\wsl.localhost\Ubuntu3\home\study\ebac\fullStackJava\backEnd\4_IDE" />
+      <recent name="\\wsl.localhost\Ubuntu3\home\study\ebac\fullStackJava\backEnd\4_IDE\mod5" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.j_fborges.dao" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="4_IDE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrimeiraClasse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.PrimeiraClasse" />
+      <module name="4_IDE" />
+      <option name="PROGRAM_PARAMETERS" value="João Pedro Borges" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.PrimeiraClasse" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f50716d4-dc56-42d6-b67a-cf844ada907a" name="Changes" comment="" />
+      <created>1761359170641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761359170641</updated>
+    </task>
+    <servers />
+  </component>
+</project>
