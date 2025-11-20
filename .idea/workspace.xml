@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f50716d4-dc56-42d6-b67a-cf844ada907a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/mavenHomeManager.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testes_parte1/4_IDE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testes_parte1/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testes_parte1/src/br/com/j_fborges/NameEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testes_parte1/src/br/com/j_fborges/NameSorter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testes_parte1/test/br/com/j_fborges/NameSorterTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;j-fborges&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:j-fborges/java_fullstack_course_ebac.git&quot;,
+    &quot;accountId&quot;: &quot;724abc8b-a34f-4cc2-adb2-636844db3352&quot;
+  }
+}</component>
+  <component name="JavaCoverageOptionsProvider">
+    <option name="myRunnerId" value="jacoco" />
+    <option name="myTestModulesCoverage" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="34XTxYaQTL34aAdTFdE2BdXHkvu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Application.Main.executor": "Coverage",
+    "Application.PrimeiraClasse.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.NameSorterTest.executor": "Coverage",
+    "JUnit.NameSorterTest.getNameList.executor": "Coverage",
+    "JUnit.NameSorterTest.loadNames.executor": "Run",
+    "JUnit.NameSorterTest.printFeminineNames.executor": "Run",
+    "JUnit.NameSorterTest.printMasculineNames.executor": "Run",
+    "JUnit.NameSorterTest.sortAnPrintNames.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "git-widget-placeholder": "java__tests1",
+    "onboarding.tips.debug.path": "//wsl.localhost/Ubuntu3/home/study/ebac/fullStackJava/backEnd/4_IDE/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "coverage"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu3\home\study\ebac\fullStackJava\backEnd\4_IDE" />
+      <recent name="\\wsl.localhost\Ubuntu3\home\study\ebac\fullStackJava\backEnd\4_IDE\mod5" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.com.j_fborges" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.NameSorterTest">
+    <configuration name="NameSorterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_IDE" />
+      <extension name="coverage" runner="jacoco">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.NameSorterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NameSorterTest.loadNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_IDE" />
+      <extension name="coverage" runner="jacoco">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.NameSorterTest" />
+      <option name="METHOD_NAME" value="loadNames" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NameSorterTest.printFeminineNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_IDE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.NameSorterTest" />
+      <option name="METHOD_NAME" value="printFeminineNames" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NameSorterTest.printMasculineNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_IDE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.NameSorterTest" />
+      <option name="METHOD_NAME" value="printMasculineNames" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NameSorterTest.sortAnPrintNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_IDE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.NameSorterTest" />
+      <option name="METHOD_NAME" value="sortAnPrintNames" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.NameSorterTest" />
+        <item itemvalue="JUnit.NameSorterTest.printFeminineNames" />
+        <item itemvalue="JUnit.NameSorterTest.printMasculineNames" />
+        <item itemvalue="JUnit.NameSorterTest.loadNames" />
+        <item itemvalue="JUnit.NameSorterTest.sortAnPrintNames" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f50716d4-dc56-42d6-b67a-cf844ada907a" name="Changes" comment="" />
+      <created>1761359170641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761359170641</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_loadNames.exec" NAME="NameSorterTest.loadNames Coverage Results" MODIFIED="1763651763172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest.exec" NAME="NameSorterTest Coverage Results" MODIFIED="1763658125951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_getNameList.exec" NAME="NameSorterTest.getNameList Coverage Results" MODIFIED="1763578841849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$Main.exec" NAME="Main Coverage Results" MODIFIED="1763651211366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_getNameList.ic" NAME="NameSorterTest.getNameList Coverage Results" MODIFIED="1763574760018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+  </component>
+</project>
