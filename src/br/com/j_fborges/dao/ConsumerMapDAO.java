@@ -8,17 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class ConsumerMapDAO extends GenericDAO<Consumer> implements IConsumerDAO {
+public class ConsumerMapDAO extends GenericDAO<Consumer, Long> implements IConsumerDAO {
 
     public ConsumerMapDAO(){
         super();
-        Map<Long, Consumer> innerMap = (Map<Long, Consumer>) SingletonGenericDAOMap.getInstance().getMap().get(getClassType());
-        if (innerMap == null) {
-            innerMap = new HashMap<>();
-            SingletonGenericDAOMap.getInstance().getMap().put(getClassType(), innerMap);
-        }
-
-        SingletonGenericDAOMap.printMap();
     }
 
     @Override

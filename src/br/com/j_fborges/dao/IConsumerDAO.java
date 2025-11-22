@@ -6,7 +6,7 @@ import br.com.j_fborges.domain.Consumer;
 
 import java.util.Collection;
 
-public interface IConsumerDAO extends IGenericDAO<Consumer> {
+public interface IConsumerDAO extends IGenericDAO<Consumer, Long> {
 
 
 }

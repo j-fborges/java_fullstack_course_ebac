@@ -11,7 +11,7 @@ public class SingletonGenericDAOMap {
      * Contais all application data.
      * Simulates DB
      */
-    protected Map<Class, Map<Long, ?>> map;
+    protected Map<Class, Map<?, ?>> map;
 
     private SingletonGenericDAOMap() {
         map = new HashMap<>();
@@ -30,7 +30,7 @@ public class SingletonGenericDAOMap {
         return singletonGenericDaoMap;
     }
 
-    public Map<Class, Map<Long, ?>> getMap() {
+    public Map<Class, Map<?, ?>> getMap() {
         return this.map;
     }
 

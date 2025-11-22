@@ -14,6 +14,9 @@ import br.com.j_fborges.exception.TypeKeyNotFoundException;
 import br.com.j_fborges.factory.Factory;
 import br.com.j_fborges.factory.IFactory;
 import br.com.j_fborges.factory.PersistentFactory;
+import br.com.j_fborges.service.ConsumerService;
+import br.com.j_fborges.service.IConsumerService;
+import br.com.j_fborges.service.generic.IGenericService;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -26,6 +29,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ConsumerRegistrationTable.class.getName());
     private final IConsumerDAO iConsumerDAO;
+    private final IConsumerService consumerService;
 
     private Integer selectedRow;
     private Boolean isUpdatingRow = false;
@@ -56,6 +60,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         initCustomComponents();
 
         this.iConsumerDAO = new ConsumerMapDAO();
+        this.consumerService = new ConsumerService(this.iConsumerDAO);
 //        this.consumerDAO = new ConsumerSetDAO();
     }
 
@@ -423,13 +428,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void clearFields() {
-        inputConsumerName.setText("");
-        inputConsumerIdNumber.setText("");
-        inputConsumerTel.setText("");
-        inputConsumerAddress.setText("");
-        inputConsumerAddressNumber.setText("");
-        inputConsumerCity.setText("");
-        inputConsumerState.setText("");
+        RegistrationTableController.clearFields(inputConsumerName, inputConsumerIdNumber, inputConsumerTel, inputConsumerAddress, inputConsumerAddressNumber, inputConsumerCity, inputConsumerState);
     }
 
     private void initCustomComponents() {
@@ -479,9 +478,9 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         }
     }
 
-    public IGenericDAO getDAO() {
-        //TODO: create differentiating clausules for different objects DAOs
-        return iConsumerDAO;
+    public IGenericService getMatchingService() {
+        //TODO: create differentiating clausules for different objects Servicess
+        return consumerService;
     }
 
     public void addPersistentEntryAsRow(Persistent persistent) {
@@ -493,28 +492,13 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
     public void updateTable() throws TypeKeyNotFoundException, InvalidDataException {
 
-//        String name = inputConsumerName.getText();
-//        String idNumber = inputConsumerIdNumber.getText();
-//        String tel = inputConsumerTel.getText();
-//        String address = inputConsumerAddress.getText();
-//        String num = inputConsumerAddressNumber.getText();
-//        String city = inputConsumerCity.getText();
-//        String state = inputConsumerState.getText();
-//
-//        if (!areInputsValid(name, idNumber, tel, address, num, city, state)) {
-//            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
-//            return;
-//        }
-
         if (isUpdatingRow) {
-//            Consumer consumer = new Consumer(name, idNumber, tel, address, num, city, state);
             Persistent persistent = genObjectEntry(getCurrentFormFields(), "Ofcourse");
-//            consumerDAO.update(consumer);
 
-            getDAO().update(persistent);
+
+            getMatchingService().update(persistent);
 
             model.removeRow(getSelectedRow());
-//            model.addRow(new Object[]{consumer.getName(), consumer.getIdNumber(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
             addPersistentEntryAsRow(persistent);
             btnRegisterConsumer.setText("Register");
             btnClearFields.setText("Clear");
@@ -524,14 +508,11 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
         } else {
 
-//            Consumer consumer = new Consumer(name, idNumber, tel, address, num, city, state);
             Persistent persistent = genObjectEntry(getCurrentFormFields(), "Ofcourse");
 
-//            Boolean isRegistered = iConsumerDAO.create(consumer);
-            Boolean isRegistered = getDAO().create(persistent);
+            Boolean isRegistered = getMatchingService().register(persistent);
 
             if (isRegistered) {
-//                model.addRow(new Object[]{consumer.getName(), consumer.getIdNumber(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
                 addPersistentEntryAsRow(persistent);
                 clearFields();
             } else {

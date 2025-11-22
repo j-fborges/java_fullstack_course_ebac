@@ -5,13 +5,15 @@ import br.com.j_fborges.dao.SingletonGenericDAOMap;
 import br.com.j_fborges.domain.Persistent;
 import br.com.j_fborges.exception.TypeKeyNotFoundException;
 
+import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
-public abstract class GenericDAO<T extends Persistent> implements IGenericDAO<T>{
+public abstract class GenericDAO<T extends Persistent, E extends Serializable> implements IGenericDAO<T, E>{
 
     private SingletonGenericDAOMap singletonMap;
 
@@ -24,16 +26,16 @@ public abstract class GenericDAO<T extends Persistent> implements IGenericDAO<T>
         this.singletonMap.printMap();
     }
 
-    public Long getIDKey(T entity) throws TypeKeyNotFoundException {
+    public E getIDKey(T entity) throws TypeKeyNotFoundException {
         Field[] fields = entity.getClass().getDeclaredFields();
-        Long returnValue = null;
+        E returnValue = null;
         for (Field field : fields) {
             if (field.isAnnotationPresent(TypeIDKey.class)) {
                 TypeIDKey typeIDKey = field.getAnnotation(TypeIDKey.class);
                 String methodName = typeIDKey.value();
                 try {
                     Method method = entity.getClass().getMethod(methodName);
-                    returnValue = (Long) method.invoke(entity);
+                    returnValue = (E) method.invoke(entity);
                     return returnValue;
                 } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
                     //Criar exception de negócio TypeKeyNotFoundException
@@ -53,19 +55,30 @@ public abstract class GenericDAO<T extends Persistent> implements IGenericDAO<T>
     @Override
     public Boolean create(T entity) throws TypeKeyNotFoundException {
 
-        Map<Long, T> innerMap = (Map<Long, T>) this.singletonMap.getMap().get(getClassType());
-        if (innerMap.containsKey(getIDKey(entity))) {
+//        Map<E, T> innerMap = (Map<E, T>) this.singletonMap.getMap().get(getClassType());
+        Map<E, T> innerMap = getMap();
+        E idKey = getIDKey(entity);
+        if (innerMap.containsKey(idKey)) {
             return false;
         }
-        innerMap.put(entity.getIdCode(), entity);
+        innerMap.put(idKey, entity);
         return true;
     }
 
+    private Map<E, T> getMap() {
+        Map<E, T> innerMap = (Map<E, T>) this.singletonMap.getMap().get(getClassType());
+        if (innerMap == null) {
+            innerMap = new HashMap<>();
+            this.singletonMap.getMap().put(getClassType(), innerMap);
+        }
+
+        SingletonGenericDAOMap.printMap();
+        return innerMap;
+    }
+
     @Override
-    public void destroy(Long value) {
-//        Consumer consumerRegistered = map.get(cpf);
-//        map.remove(consumerRegistered.getIdNumber(), consumerRegistered);
-        Map<Long, T> innerMap = (Map<Long, T>) this.singletonMap.getMap().get(getClassType());
+    public void destroy(E value) {
+        Map<E, T> innerMap = (Map<E, T>) this.singletonMap.getMap().get(getClassType());
         T objectRegistered = innerMap.get(value);
         if (objectRegistered != null) {
             innerMap.remove(value, objectRegistered);
@@ -73,25 +86,18 @@ public abstract class GenericDAO<T extends Persistent> implements IGenericDAO<T>
     }
 
     @Override
-    public void update(T entity) {
-//        Consumer consumerRegistered = map.get(consumer.getIdNumber());
-//        consumerRegistered.setName(consumer.getName());
-//        consumerRegistered.setTel(consumer.getTel());
-//        consumerRegistered.setAddressNumber(consumer.getAddressNumber());
-//        consumerRegistered.setAddress(consumer.getAddress());
-//        consumerRegistered.setCity(consumer.getCity());
-//        consumerRegistered.setState(consumer.getState());
-        Map<Long, T> innerMap = (Map<Long, T>) this.singletonMap.getMap().get(getClassType());
-        T objectRegistered = innerMap.get(entity.getIdCode());
+    public void update(T entity) throws TypeKeyNotFoundException {
+        Map<E, T> innerMap = (Map<E, T>) this.singletonMap.getMap().get(getClassType());
+        E idKey = getIDKey(entity);
+        T objectRegistered = innerMap.get(idKey);
         if (objectRegistered != null) {
             updateData(entity, objectRegistered);
         }
     }
 
     @Override
-    public T find(Long value) {
-//        return this.map.get(cpf);
-        Map<Long, T> innerMap = (Map<Long, T>) this.singletonMap.getMap().get(getClassType());
+    public T find(E value) {
+        Map<E, T> innerMap = (Map<E, T>) this.singletonMap.getMap().get(getClassType());
         return innerMap.get(value);
     }
 
