@@ -2,12 +2,13 @@ package br.com.j_fborges.dao.generic;
 
 import br.com.j_fborges.domain.Consumer;
 import br.com.j_fborges.domain.Persistent;
+import br.com.j_fborges.exception.TypeKeyNotFoundException;
 
 import java.util.Collection;
 
 public interface IGenericDAO <T extends Persistent> {
 
-    public Boolean create(T entity);
+    public Boolean create(T entity) throws TypeKeyNotFoundException;
 
     public void destroy(Long cpf);
 

@@ -1,9 +1,13 @@
 package br.com.j_fborges.dao.generic;
 
+import br.com.j_fborges.annotation.TypeIDKey;
 import br.com.j_fborges.dao.SingletonGenericDAOMap;
-import br.com.j_fborges.domain.Consumer;
 import br.com.j_fborges.domain.Persistent;
+import br.com.j_fborges.exception.TypeKeyNotFoundException;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.Map;
 
@@ -20,11 +24,37 @@ public abstract class GenericDAO<T extends Persistent> implements IGenericDAO<T>
         this.singletonMap.printMap();
     }
 
+    public Long getIDKey(T entity) throws TypeKeyNotFoundException {
+        Field[] fields = entity.getClass().getDeclaredFields();
+        Long returnValue = null;
+        for (Field field : fields) {
+            if (field.isAnnotationPresent(TypeIDKey.class)) {
+                TypeIDKey typeIDKey = field.getAnnotation(TypeIDKey.class);
+                String methodName = typeIDKey.value();
+                try {
+                    Method method = entity.getClass().getMethod(methodName);
+                    returnValue = (Long) method.invoke(entity);
+                    return returnValue;
+                } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+                    //Criar exception de negócio TypeKeyNotFoundException
+                    e.printStackTrace();
+                    throw new TypeKeyNotFoundException("Object ID key " + entity.getClass() + " not found", e);
+                }
+            }
+        }
+        if (returnValue == null) {
+            String msg = "Object ID key " + entity.getClass() + " not found";
+            System.out.println("**** ERROR ****" + msg);
+            throw new TypeKeyNotFoundException(msg);
+        }
+        return null;
+    }
+
     @Override
-    public Boolean create(T entity) {
+    public Boolean create(T entity) throws TypeKeyNotFoundException {
 
         Map<Long, T> innerMap = (Map<Long, T>) this.singletonMap.getMap().get(getClassType());
-        if (innerMap.containsKey(entity.getIdCode())) {
+        if (innerMap.containsKey(getIDKey(entity))) {
             return false;
         }
         innerMap.put(entity.getIdCode(), entity);

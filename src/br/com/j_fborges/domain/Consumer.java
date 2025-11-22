@@ -1,10 +1,13 @@
 package br.com.j_fborges.domain;
 
+import br.com.j_fborges.annotation.TypeIDKey;
+
 import java.util.Objects;
 
 public class Consumer implements Persistent{
 
     private String name;
+    @TypeIDKey("getIdNumber")
     private Long idNumber;
     private Long tel;
     private String address;

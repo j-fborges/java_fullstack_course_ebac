@@ -5,20 +5,27 @@
 package gui;
 
 import br.com.j_fborges.dao.ConsumerMapDAO;
-import br.com.j_fborges.dao.ConsumerSetDAO;
 import br.com.j_fborges.dao.IConsumerDAO;
+import br.com.j_fborges.dao.generic.IGenericDAO;
 import br.com.j_fborges.domain.Consumer;
+import br.com.j_fborges.domain.Persistent;
+import br.com.j_fborges.exception.InvalidDataException;
+import br.com.j_fborges.exception.TypeKeyNotFoundException;
+import br.com.j_fborges.factory.Factory;
+import br.com.j_fborges.factory.IFactory;
+import br.com.j_fborges.factory.PersistentFactory;
+
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.util.ArrayList;
 
 /**
- *
  * @author root
  */
 public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ConsumerRegistrationTable.class.getName());
-    private final IConsumerDAO consumerDAO;
+    private final IConsumerDAO iConsumerDAO;
 
     private Integer selectedRow;
     private Boolean isUpdatingRow = false;
@@ -48,7 +55,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         initComponents();
         initCustomComponents();
 
-        this.consumerDAO = new ConsumerMapDAO();
+        this.iConsumerDAO = new ConsumerMapDAO();
 //        this.consumerDAO = new ConsumerSetDAO();
     }
 
@@ -138,20 +145,24 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         btnRegisterConsumer.setText("Register");
         btnRegisterConsumer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegisterConsumerActionPerformed(evt);
+                try {
+                    btnRegisterConsumerActionPerformed(evt);
+                } catch (TypeKeyNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
         tblConsumer.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7"
-            }
+                new Object[][]{
+                        {null, null, null, null, null, null, null},
+                        {null, null, null, null, null, null, null},
+                        {null, null, null, null, null, null, null},
+                        {null, null, null, null, null, null, null}
+                },
+                new String[]{
+                        "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7"
+                }
         ));
         tblConsumer.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -184,78 +195,78 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblConsumerTel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(inputConsumerTel))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblConsumerIdNumber)
-                                .addGap(18, 18, 18)
-                                .addComponent(inputConsumerIdNumber))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblConsumerName)
-                                .addGap(18, 18, 18)
-                                .addComponent(inputConsumerName, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblConsumerAddress)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(inputConsumerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(lblConsumerAddressNumber)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(inputConsumerAddressNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblConsumerCity)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(inputConsumerCity, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(lblConsumerState)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(inputConsumerState)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnClearFields)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnRegisterConsumer)))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jScrollPane1)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(lblConsumerTel)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(inputConsumerTel))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(lblConsumerIdNumber)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(inputConsumerIdNumber))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(lblConsumerName)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(inputConsumerName, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                        .addComponent(lblConsumerAddress)
+                                                                        .addGap(18, 18, 18)
+                                                                        .addComponent(inputConsumerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addGap(18, 18, 18)
+                                                                        .addComponent(lblConsumerAddressNumber)
+                                                                        .addGap(18, 18, 18)
+                                                                        .addComponent(inputConsumerAddressNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                        .addComponent(lblConsumerCity)
+                                                                        .addGap(18, 18, 18)
+                                                                        .addComponent(inputConsumerCity, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addGap(18, 18, 18)
+                                                                        .addComponent(lblConsumerState)
+                                                                        .addGap(18, 18, 18)
+                                                                        .addComponent(inputConsumerState)))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(btnClearFields)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(btnRegisterConsumer)))))
+                                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConsumerName)
-                    .addComponent(inputConsumerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblConsumerAddress)
-                    .addComponent(inputConsumerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblConsumerAddressNumber)
-                    .addComponent(inputConsumerAddressNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConsumerIdNumber)
-                    .addComponent(inputConsumerIdNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblConsumerCity)
-                    .addComponent(inputConsumerCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblConsumerState)
-                    .addComponent(inputConsumerState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConsumerTel)
-                    .addComponent(inputConsumerTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRegisterConsumer)
-                    .addComponent(btnClearFields))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblConsumerName)
+                                        .addComponent(inputConsumerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblConsumerAddress)
+                                        .addComponent(inputConsumerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblConsumerAddressNumber)
+                                        .addComponent(inputConsumerAddressNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblConsumerIdNumber)
+                                        .addComponent(inputConsumerIdNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblConsumerCity)
+                                        .addComponent(inputConsumerCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblConsumerState)
+                                        .addComponent(inputConsumerState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblConsumerTel)
+                                        .addComponent(inputConsumerTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnRegisterConsumer)
+                                        .addComponent(btnClearFields))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
         );
 
         pack();
@@ -294,46 +305,16 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inputConsumerStateActionPerformed
 
-    private void btnRegisterConsumerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterConsumerActionPerformed
+    private void btnRegisterConsumerActionPerformed(java.awt.event.ActionEvent evt) throws TypeKeyNotFoundException, InvalidDataException {//GEN-FIRST:event_btnRegisterConsumerActionPerformed
 
-        String name = inputConsumerName.getText();
-        String idNumber = inputConsumerIdNumber.getText();
-        String tel = inputConsumerTel.getText();
-        String address = inputConsumerAddress.getText();
-        String num = inputConsumerAddressNumber.getText();
-        String city = inputConsumerCity.getText();
-        String state = inputConsumerState.getText();
+        try {
+            updateTable();
 
-        if (!areInputsValid(name, idNumber, tel, address, num, city, state)) {
-            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
-            return;
+        } catch (TypeKeyNotFoundException e) {
+            JOptionPane.showMessageDialog(null, "SYSTEM ERROR, CONTACT ADMINISTRATOR", "ERROR", JOptionPane.INFORMATION_MESSAGE);
+        } catch (InvalidDataException e) {
+            JOptionPane.showMessageDialog(null, "All Fields are mandatory.", "ERROR", JOptionPane.INFORMATION_MESSAGE);
         }
-
-        if (isUpdatingRow) {
-            Consumer consumer = new Consumer(name, idNumber, tel, address, num, city, state);
-            consumerDAO.update(consumer);
-
-            model.removeRow(getSelectedRow());
-            model.addRow(new Object[]{consumer.getName(), consumer.getIdNumber(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
-            btnRegisterConsumer.setText("Register");
-            btnClearFields.setText("Clear");
-            setIsUpdatingRow(false);
-            setSelectedRow(null);
-            clearFields();
-
-        } else {
-            Consumer consumer = new Consumer(name, idNumber, tel, address, num, city, state);
-            Boolean isRegistered = consumerDAO.create(consumer);
-
-            if (isRegistered) {
-                model.addRow(new Object[]{consumer.getName(), consumer.getIdNumber(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
-                clearFields();
-            } else {
-                JOptionPane.showMessageDialog(null, "Consumer is already registered", "Warning", JOptionPane.INFORMATION_MESSAGE);
-            }
-        }
-
-
     }//GEN-LAST:event_btnRegisterConsumerActionPerformed
 
     private void tblConsumerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblConsumerMouseClicked
@@ -342,7 +323,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
         Long idNumber = (Long) tblConsumer.getValueAt(getSelectedRow(), 1);
 
-        Consumer consumer = this.consumerDAO.find(idNumber);
+        Consumer consumer = this.iConsumerDAO.find(idNumber);
 
         if (consumer != null) {
             inputConsumerName.setText(consumer.getName());
@@ -369,7 +350,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
             if (result == JOptionPane.YES_OPTION) {
 
                 Long idNumber = (Long) tblConsumer.getValueAt(getSelectedRow(), 1);
-                this.consumerDAO.destroy(idNumber);
+                this.iConsumerDAO.destroy(idNumber);
                 model.removeRow(getSelectedRow());
                 btnRegisterConsumer.setText("Register");
                 btnClearFields.setText("Clear");
@@ -399,7 +380,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -470,6 +451,93 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
             }
         }
         return true;
+    }
+
+    private Persistent genObjectEntry(String[] dadosSeparados, String opcaoMenuGeral) {
+        IFactory factory = new Factory();
+        PersistentFactory persistentFactory = factory.createFactory(opcaoMenuGeral);
+        return persistentFactory.createObject(dadosSeparados);
+    }
+
+    String[] getCurrentFormFields() throws InvalidDataException {
+        ArrayList<String> currentFormFields = new ArrayList<>();
+
+        //if current form is consumer`s do the following:
+        currentFormFields.add(inputConsumerName.getText());
+        currentFormFields.add(inputConsumerIdNumber.getText());
+        currentFormFields.add(inputConsumerTel.getText());
+        currentFormFields.add(inputConsumerAddress.getText());
+        currentFormFields.add(inputConsumerAddressNumber.getText());
+        currentFormFields.add(inputConsumerCity.getText());
+        currentFormFields.add(inputConsumerState.getText());
+        //TODO: create differentiating clausules and checks for different objects
+
+        if (areInputsValid(currentFormFields.toArray(new String[0]))) {
+            return currentFormFields.toArray(new String[0]);
+        } else {
+            throw new InvalidDataException("All fields are mandatory!");
+        }
+    }
+
+    public IGenericDAO getDAO() {
+        //TODO: create differentiating clausules for different objects DAOs
+        return iConsumerDAO;
+    }
+
+    public void addPersistentEntryAsRow(Persistent persistent) {
+        //if current form is consumer`s do the following:
+        Consumer consumer = (Consumer) persistent;
+        model.addRow(new Object[]{consumer.getName(), consumer.getIdNumber(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
+        //TODO: create differentiating clausules and checks for different objects
+    }
+
+    public void updateTable() throws TypeKeyNotFoundException, InvalidDataException {
+
+//        String name = inputConsumerName.getText();
+//        String idNumber = inputConsumerIdNumber.getText();
+//        String tel = inputConsumerTel.getText();
+//        String address = inputConsumerAddress.getText();
+//        String num = inputConsumerAddressNumber.getText();
+//        String city = inputConsumerCity.getText();
+//        String state = inputConsumerState.getText();
+//
+//        if (!areInputsValid(name, idNumber, tel, address, num, city, state)) {
+//            JOptionPane.showMessageDialog(this, "All fields are mandatory.");
+//            return;
+//        }
+
+        if (isUpdatingRow) {
+//            Consumer consumer = new Consumer(name, idNumber, tel, address, num, city, state);
+            Persistent persistent = genObjectEntry(getCurrentFormFields(), "Ofcourse");
+//            consumerDAO.update(consumer);
+
+            getDAO().update(persistent);
+
+            model.removeRow(getSelectedRow());
+//            model.addRow(new Object[]{consumer.getName(), consumer.getIdNumber(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
+            addPersistentEntryAsRow(persistent);
+            btnRegisterConsumer.setText("Register");
+            btnClearFields.setText("Clear");
+            setIsUpdatingRow(false);
+            setSelectedRow(null);
+            clearFields();
+
+        } else {
+
+//            Consumer consumer = new Consumer(name, idNumber, tel, address, num, city, state);
+            Persistent persistent = genObjectEntry(getCurrentFormFields(), "Ofcourse");
+
+//            Boolean isRegistered = iConsumerDAO.create(consumer);
+            Boolean isRegistered = getDAO().create(persistent);
+
+            if (isRegistered) {
+//                model.addRow(new Object[]{consumer.getName(), consumer.getIdNumber(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
+                addPersistentEntryAsRow(persistent);
+                clearFields();
+            } else {
+                JOptionPane.showMessageDialog(null, "Consumer is already registered", "Warning", JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
     }
 
 }

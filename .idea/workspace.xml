@@ -5,14 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f50716d4-dc56-42d6-b67a-cf844ada907a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SingletonGenericDAOMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/GenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/IGenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Persistent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/annotation/TypeIDKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/exception/InvalidDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/exception/TypeKeyNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/factory/ConsumerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/factory/Factory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/factory/IFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/factory/PersistentFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ConsumerMapDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ConsumerMapDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/IConsumerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/IConsumerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ConsumerSetDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ConsumerSetDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/SingletonGenericDAOMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/SingletonGenericDAOMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/GenericDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/GenericDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/IGenericDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/IGenericDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Consumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/GenericDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/IGenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/IGenericDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/ConsumerRegistrationTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ConsumerRegistrationTable.java" afterDir="false" />
     </list>
@@ -24,6 +43,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Exception" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -61,15 +81,18 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;consumer__crud&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;consumer__crud__generics&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;//wsl.localhost/Ubuntu3/home/study/ebac/fullStackJava/backEnd/4_IDE/src/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.j_fborges.factory" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu3\home\study\ebac\fullStackJava\backEnd\4_IDE\" />
       <recent name="\\wsl.localhost\Ubuntu3\home\study\ebac\fullStackJava\backEnd\4_IDE" />
@@ -117,5 +140,23 @@
       <updated>1761359170641</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$AllTests.exec" NAME="AllTests Coverage Results" MODIFIED="1763669391253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_loadNames.exec" NAME="NameSorterTest.loadNames Coverage Results" MODIFIED="1763651763172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest.exec" NAME="NameSorterTest Coverage Results" MODIFIED="1763658125951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_getNameList.exec" NAME="NameSorterTest.getNameList Coverage Results" MODIFIED="1763578841849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$Main.exec" NAME="Main Coverage Results" MODIFIED="1763651211366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_getNameList.ic" NAME="NameSorterTest.getNameList Coverage Results" MODIFIED="1763574760018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
   </component>
 </project>
