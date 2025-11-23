@@ -150,11 +150,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         btnRegisterConsumer.setText("Register");
         btnRegisterConsumer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                try {
                     btnRegisterConsumerActionPerformed(evt);
-                } catch (TypeKeyNotFoundException e) {
-                    throw new RuntimeException(e);
-                }
             }
         });
 
@@ -310,7 +306,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inputConsumerStateActionPerformed
 
-    private void btnRegisterConsumerActionPerformed(java.awt.event.ActionEvent evt) throws TypeKeyNotFoundException, InvalidDataException {//GEN-FIRST:event_btnRegisterConsumerActionPerformed
+    private void btnRegisterConsumerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterConsumerActionPerformed
 
         try {
             updateTable();

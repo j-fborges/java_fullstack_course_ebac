@@ -5,39 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f50716d4-dc56-42d6-b67a-cf844ada907a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/IProductDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ProductMapDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/service/ConsumerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/service/IConsumerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/service/generic/GenericService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/service/generic/IGenericService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/RegistrationTableController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ConsumerMapDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ConsumerMapDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ConsumerSetDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ConsumerSetDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/IConsumerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/IConsumerDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/SingletonGenericDAOMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/SingletonGenericDAOMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/GenericDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/GenericDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/IGenericDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/IGenericDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Persistent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Persistent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ConsumerMapDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ConsumerMapDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/IConsumerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/IConsumerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SingletonGenericDAOMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SingletonGenericDAOMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/GenericDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/IGenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/IGenericDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Persistent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Persistent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/ConsumerRegistrationTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ConsumerRegistrationTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
