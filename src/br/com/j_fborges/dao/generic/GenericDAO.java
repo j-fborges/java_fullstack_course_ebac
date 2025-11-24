@@ -19,7 +19,7 @@ public abstract class GenericDAO<T extends Persistent, E extends Serializable> i
 
     public abstract Class<T> getClassType();
 
-    public abstract void updateData(T entity, T entityCadastrado);
+    public abstract void updateData(T entity, T entityRegistered);
 
     public GenericDAO() {
         this.singletonMap = SingletonGenericDAOMap.getInstance();
