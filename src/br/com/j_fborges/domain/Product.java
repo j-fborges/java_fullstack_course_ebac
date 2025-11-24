@@ -14,6 +14,13 @@ public class Product implements Persistent{
     private String description;
 
     private BigDecimal value;
+    
+    public Product(String title, String idCode, String value, String description){
+        this.title = title;
+        this.idCode = idCode;
+        this.value = new BigDecimal(value);
+        this.description = description;
+    }
 
     public String getIdCode() {
         return idCode;

@@ -1,11 +1,11 @@
 package gui;
 
-import javax.swing.*;
+import javax.swing.text.JTextComponent;
 
 public class RegistrationTableController {
 
-    public static void clearFields(JTextField... fields){
-        for(JTextField field: fields){
+    public static void clearFields(JTextComponent... fields){
+        for(JTextComponent field: fields){
             field.setText("");
         }
     }
