@@ -4,6 +4,8 @@ import br.com.j_fborges.dao.generic.GenericDAO;
 import br.com.j_fborges.domain.Sale;
 import br.com.j_fborges.exception.TypeKeyNotFoundException;
 
+import java.math.BigDecimal;
+
 public class SaleMapDAO extends GenericDAO<Sale, String> implements ISaleDao {
 
 

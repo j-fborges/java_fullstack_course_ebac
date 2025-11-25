@@ -91,7 +91,7 @@ public class Sale implements Persistent {
             ProductQuantity prod = new ProductQuantity(product, quantity);
             saleProducts.add(prod);
         }
-        recalcularValorTotalVenda();
+        recalculateSaleTotalValue();
     }
 
     private void validateStatus() {
@@ -109,10 +109,10 @@ public class Sale implements Persistent {
             ProductQuantity produtpQtd = op.get();
             if (produtpQtd.getQuantity()>quantity) {
                 produtpQtd.removeQuantity(quantity);
-                recalcularValorTotalVenda();
+                recalculateSaleTotalValue();
             } else {
                 saleProducts.remove(op.get());
-                recalcularValorTotalVenda();
+                recalculateSaleTotalValue();
             }
 
         }
@@ -130,7 +130,7 @@ public class Sale implements Persistent {
         return result;
     }
 
-    private void recalcularValorTotalVenda() {
+    private void recalculateSaleTotalValue() {
         validateStatus();
         BigDecimal totalValue = BigDecimal.ZERO;
         for (ProductQuantity prod : this.saleProducts) {

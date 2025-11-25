@@ -5,26 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f50716d4-dc56-42d6-b67a-cf844ada907a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ISaleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SaleMapDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/ProductQuantity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Sale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/AllTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/ConsumerMapDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/ProductMapDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/SaleMapDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/mocks/ConsumerDaoMock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/mocks/ProductDaoMock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/service/ConsumerServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/service/ProductServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/factory/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/factory/Factory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/RegistrationTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/RegistrationTableController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4_IDE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/4_IDE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SaleMapDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SaleMapDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/GenericDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Sale.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +29,7 @@
       <list>
         <option value="Exception" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -55,6 +49,9 @@
     &quot;accountId&quot;: &quot;724abc8b-a34f-4cc2-adb2-636844db3352&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -63,23 +60,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PrimeiraClasse.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;consumer__crud__tests&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;//wsl.localhost/Ubuntu3/home/study/ebac/fullStackJava/backEnd/4_IDE/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Application.Main.executor": "Run",
+    "Application.PrimeiraClasse.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.AllTests.executor": "Coverage",
+    "JUnit.ConsumerMapDAOTest.create.executor": "Run",
+    "JUnit.ConsumerMapDAOTest.destroy.executor": "Run",
+    "JUnit.ConsumerMapDAOTest.executor": "Coverage",
+    "JUnit.ConsumerMapDAOTest.find.executor": "Run",
+    "JUnit.ConsumerMapDAOTest.findAll.executor": "Run",
+    "JUnit.ConsumerMapDAOTest.getClassType.executor": "Run",
+    "JUnit.ConsumerMapDAOTest.update.executor": "Run",
+    "JUnit.ConsumerMapDAOTest.updateData.executor": "Run",
+    "JUnit.ConsumerServiceTest.executor": "Run",
+    "JUnit.ProductMapDAOTest.getClassType.executor": "Run",
+    "JUnit.ProductMapDAOTest.updateData.executor": "Run",
+    "JUnit.ProductServiceTest.executor": "Run",
+    "JUnit.SaleMapDAOTest.doesNotAddProductsToCompleteSale.executor": "Run",
+    "JUnit.SaleMapDAOTest.doesNotDestroySale.executor": "Run",
+    "JUnit.SaleMapDAOTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "git-widget-placeholder": "consumer__crud__tests",
+    "onboarding.tips.debug.path": "//wsl.localhost/Ubuntu3/home/study/ebac/fullStackJava/backEnd/4_IDE/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.build"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.j_fborges.factory" />
@@ -89,9 +108,16 @@
       <recent name="\\wsl.localhost\Ubuntu3\home\study\ebac\fullStackJava\backEnd\4_IDE" />
       <recent name="\\wsl.localhost\Ubuntu3\home\study\ebac\fullStackJava\backEnd\4_IDE\mod5" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="br.com.j_fborges.service" />
       <recent name="br.com.j_fborges.dao" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.com.j_fborges.dao" />
+      <recent name="br.com.j_fborges.service" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -102,16 +128,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimeiraClasse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.PrimeiraClasse" />
+    <configuration name="AllTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="4_IDE" />
-      <option name="PROGRAM_PARAMETERS" value="João Pedro Borges" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.AllTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerMapDAOTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_IDE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.j_fborges.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges.dao" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.dao.ConsumerMapDAOTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaleMapDAOTest.doesNotAddProductsToCompleteSale" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_IDE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges.dao" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.dao.SaleMapDAOTest" />
+      <option name="METHOD_NAME" value="doesNotAddProductsToCompleteSale" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaleMapDAOTest.doesNotDestroySale" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="4_IDE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges.dao" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.dao.SaleMapDAOTest" />
+      <option name="METHOD_NAME" value="doesNotDestroySale" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,7 +194,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.PrimeiraClasse" />
+        <item itemvalue="JUnit.AllTests" />
+        <item itemvalue="JUnit.SaleMapDAOTest.doesNotDestroySale" />
+        <item itemvalue="JUnit.ConsumerMapDAOTest.findAll" />
+        <item itemvalue="JUnit.SaleMapDAOTest.doesNotAddProductsToCompleteSale" />
       </list>
     </recent_temporary>
   </component>
@@ -140,6 +218,9 @@
     <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_loadNames.exec" NAME="NameSorterTest.loadNames Coverage Results" MODIFIED="1763651763172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>br.com.j_fborges.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$AllTests.ic" NAME="AllTests Coverage Results" MODIFIED="1764083864736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest.exec" NAME="NameSorterTest Coverage Results" MODIFIED="1763658125951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>br.com.j_fborges.*</FILTER>
     </SUITE>
@@ -149,6 +230,9 @@
     <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$Main.exec" NAME="Main Coverage Results" MODIFIED="1763651211366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_getNameList.ic" NAME="NameSorterTest.getNameList Coverage Results" MODIFIED="1763574760018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$ConsumerMapDAOTest.ic" NAME="ConsumerMapDAOTest Coverage Results" MODIFIED="1764039335469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.dao.*</FILTER>
     </SUITE>
   </component>
 </project>

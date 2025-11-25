@@ -38,7 +38,6 @@ public abstract class GenericDAO<T extends Persistent, E extends Serializable> i
                     returnValue = (E) method.invoke(entity);
                     return returnValue;
                 } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-                    //Criar exception de negócio TypeKeyNotFoundException
                     e.printStackTrace();
                     throw new TypeKeyNotFoundException("Object ID key " + entity.getClass() + " not found", e);
                 }
