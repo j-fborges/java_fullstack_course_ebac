@@ -12,7 +12,7 @@ public class ProductQuantity {
     public ProductQuantity(Product product, Integer quantity) {
         this.quantity = quantity;
         this.product = product;
-        this.totalValue = product.getValue().multiply(BigDecimal.valueOf(quantity));
+        this.totalValue = product.getPrice().multiply(BigDecimal.valueOf(quantity));
     }
 
     public Product getProduct() {
@@ -41,14 +41,14 @@ public class ProductQuantity {
 
     public void addQuantity(Integer quantity) {
         this.quantity += quantity;
-        BigDecimal newValue = this.product.getValue().multiply(BigDecimal.valueOf(quantity));
+        BigDecimal newValue = this.product.getPrice().multiply(BigDecimal.valueOf(quantity));
         BigDecimal novoTotal = this.totalValue.add(newValue);
         this.totalValue = novoTotal;
     }
 
     public void removeQuantity(Integer quantity) {
         this.quantity -= quantity;
-        BigDecimal newValue = this.product.getValue().multiply(BigDecimal.valueOf(quantity));
+        BigDecimal newValue = this.product.getPrice().multiply(BigDecimal.valueOf(quantity));
         this.totalValue = this.totalValue.subtract(newValue);
     }
 }

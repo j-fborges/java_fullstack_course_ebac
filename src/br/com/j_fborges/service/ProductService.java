@@ -10,6 +10,8 @@ import br.com.j_fborges.domain.Consumer;
 import br.com.j_fborges.domain.Product;
 import br.com.j_fborges.service.generic.GenericService;
 
+import java.util.Collection;
+
 /**
  *
  * @author root
@@ -21,8 +23,13 @@ public class ProductService extends GenericService<Product, String> implements I
     }
 
     @Override
-    public Product findByIdCode(String idCode) {
-        return this.dao.find(idCode);
+    public Collection<Product> loadProducts() {
+        return dao.findAll();
     }
-    
+
+    @Override
+    public Product find(Product product) {
+        return this.dao.find(product.getId());
+    }
+
 }

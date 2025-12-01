@@ -1,7 +1,5 @@
 package br.com.j_fborges.domain;
 
-import br.com.j_fborges.annotation.TypeIDKey;
-
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.HashSet;
@@ -14,7 +12,18 @@ public class Sale implements Persistent {
         STARTED, COMPLETED, CANCELLED;
     }
 
-    @TypeIDKey("getCode")
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    private Long id;
+
     private String code;
 
     private Consumer consumer;

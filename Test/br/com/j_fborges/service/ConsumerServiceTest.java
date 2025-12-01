@@ -8,6 +8,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.sql.SQLException;
+
 import static org.junit.Assert.*;
 
 public class ConsumerServiceTest {
@@ -24,6 +26,7 @@ public class ConsumerServiceTest {
     @Before
     public void init() {
         consumer = new Consumer(
+                "99",
                 "Rodrigo",
                 "123123484",
                 "1199999999",
@@ -36,13 +39,13 @@ public class ConsumerServiceTest {
     }
 
     @Test
-    public void findByIdNumber() {
-        Consumer expectedResult = consumerService.findByIdNumber(consumer.getIdNumber());
+    public void find() {
+        Consumer expectedResult = consumerService.find(consumer.getId());
         Assert.assertNotNull(expectedResult);
     }
 
     @Test
-    public void register() throws TypeKeyNotFoundException {
+    public void register() throws SQLException {
         Boolean expected = consumerService.register(consumer);
 
         Assert.assertTrue(expected);
@@ -54,7 +57,7 @@ public class ConsumerServiceTest {
     }
 
     @Test
-    public void alterarConsumer() throws TypeKeyNotFoundException {
+    public void updateConsumer() {
         consumer.setName("Manuel");
         consumerService.update(consumer);
 

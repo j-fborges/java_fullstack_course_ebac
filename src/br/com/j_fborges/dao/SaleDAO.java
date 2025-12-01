@@ -2,15 +2,15 @@ package br.com.j_fborges.dao;
 
 import br.com.j_fborges.dao.generic.GenericDAO;
 import br.com.j_fborges.domain.Sale;
-import br.com.j_fborges.exception.TypeKeyNotFoundException;
 
-import java.math.BigDecimal;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-public class SaleMapDAO extends GenericDAO<Sale, String> implements ISaleDao {
+public class SaleDAO extends GenericDAO<Sale, String> implements ISaleDao {
 
 
     @Override
-    public void completeSale(Sale sale) throws TypeKeyNotFoundException {
+    public void completeSale(Sale sale) {
         sale.setStatus(Sale.Status.COMPLETED);
         super.update(sale);
     }
@@ -27,7 +27,12 @@ public class SaleMapDAO extends GenericDAO<Sale, String> implements ISaleDao {
     }
 
     @Override
-    public void destroy(String value) {
+    public Integer destroy(Long id) {
         throw new UnsupportedOperationException("OPERATION NOT PERMITTED");
+    }
+
+    @Override
+    public String[] fieldsToStringArray(Sale sale, ResultSet rs) throws SQLException {
+        return new String[0];
     }
 }

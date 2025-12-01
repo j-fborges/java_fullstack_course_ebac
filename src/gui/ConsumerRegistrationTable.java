@@ -4,11 +4,10 @@
  */
 package gui;
 
-import br.com.j_fborges.dao.ConsumerMapDAO;
+import br.com.j_fborges.dao.ConsumerDAO;
 import br.com.j_fborges.dao.IConsumerDAO;
 import br.com.j_fborges.dao.IProductDAO;
-import br.com.j_fborges.dao.ProductMapDAO;
-import br.com.j_fborges.dao.generic.IGenericDAO;
+import br.com.j_fborges.dao.ProductDAO;
 import br.com.j_fborges.domain.Consumer;
 import br.com.j_fborges.domain.Persistent;
 import br.com.j_fborges.domain.Product;
@@ -27,6 +26,7 @@ import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
+import java.util.Collection;
 import javax.swing.JTable;
 
 /**
@@ -41,6 +41,15 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
     private final IProductDAO iProductDAO;
     private final IProductService productService;
 
+    public Long getSelectedPersistentId() {
+        return selectedPersistentId;
+    }
+
+    public void setSelectedPersistentId(Long selectedPersistentId) {
+        this.selectedPersistentId = selectedPersistentId;
+    }
+
+    private Long selectedPersistentId;
     private Integer selectedRow;
     private Boolean isUpdatingRow = false;
     private Boolean isConsumerForm = true;
@@ -75,12 +84,29 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         initComponents();
         initCustomComponents();
 
-        this.iConsumerDAO = new ConsumerMapDAO();
+        this.iConsumerDAO = new ConsumerDAO();
         this.consumerService = new ConsumerService(this.iConsumerDAO);
 
-        this.iProductDAO = new ProductMapDAO();
+        this.iProductDAO = new ProductDAO();
         this.productService = new ProductService(this.iProductDAO);
-//        this.consumerDAO = new ConsumerSetDAO();
+
+        ConsumerService consumerSrv = (ConsumerService) this.consumerService;
+        Collection<Consumer> consumers = consumerSrv.loadConsumers();
+
+        for(Consumer c : consumers){
+            addPersistentEntryAsRow(c);
+        }
+
+        setIsConsumerForm(false);
+
+        ProductService productSrv = (ProductService) this.productService;
+        Collection<Product> products = productSrv.loadProducts();
+
+        for(Product p : products){
+            addPersistentEntryAsRow(p);
+        }
+
+        setIsConsumerForm(true);
     }
 
     /**
@@ -514,27 +540,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegisterConsumerActionPerformed
 
     private void tblConsumerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblConsumerMouseClicked
-
         getCurrentSelectedPersistent(tblConsumer);
-//        setSelectedRow(tblConsumer.getSelectedRow());
-//        
-//        Long idNumber = (Long) tblConsumer.getValueAt(getSelectedRow(), 1);
-//        
-//        Consumer consumer = this.iConsumerDAO.find(idNumber);
-//        
-//        if (consumer != null) {
-//            inputConsumerName.setText(consumer.getName());
-//            inputConsumerIdNumber.setText(consumer.getIdNumber().toString());
-//            inputConsumerTel.setText(consumer.getTel().toString());
-//            inputConsumerAddress.setText(consumer.getAddress());
-//            inputConsumerAddressNumber.setText(consumer.getAddressNumber().toString());
-//            inputConsumerCity.setText(consumer.getCity());
-//            inputConsumerState.setText(consumer.getState());
-//            
-//            btnRegisterConsumer.setText("Update");
-//            btnClearFields.setText("Delete");
-//            setIsUpdatingRow(true);
-//        }
     }//GEN-LAST:event_tblConsumerMouseClicked
 
     private void btnClearFieldsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearFieldsActionPerformed
@@ -557,6 +563,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
                 btnClearFields.setText("Clear");
                 setIsUpdatingRow(false);
                 setSelectedRow(null);
+                setSelectedPersistentId(null);
                 clearFields();
             }
 
@@ -572,6 +579,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         btnClearFields.setText("Clear");
         setIsUpdatingRow(false);
         setSelectedRow(null);
+        setSelectedPersistentId(null);
         clearFields();
 
         if (isConsumerForm) {
@@ -677,8 +685,9 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
     }
 
     private void initCustomComponents() {
+        model.addColumn("Id");
         model.addColumn("Name");
-        model.addColumn("id Number");
+        model.addColumn("Id Number");
         model.addColumn("Telephone");
         model.addColumn("Address");
         model.addColumn("Address Number");
@@ -687,6 +696,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
         tblConsumer.setModel(model);
 
+        productTblModel.addColumn("Id");
         productTblModel.addColumn("Title");
         productTblModel.addColumn("Id Code");
         productTblModel.addColumn("Value");
@@ -714,6 +724,13 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         ArrayList<String> currentFormFields = new ArrayList<>();
 
         if (isConsumerForm) {
+            if(isUpdatingRow){
+                currentFormFields.add(getSelectedPersistentId().toString());
+            } else {
+                IGenericService srv = getMatchingService();
+                Long nextVal = (srv.loadCurrSequenceIdKey() + 1);
+                currentFormFields.add(nextVal.toString());
+            }
             currentFormFields.add(inputConsumerName.getText());
             currentFormFields.add(inputConsumerIdNumber.getText());
             currentFormFields.add(inputConsumerTel.getText());
@@ -722,6 +739,13 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
             currentFormFields.add(inputConsumerCity.getText());
             currentFormFields.add(inputConsumerState.getText());
         } else {
+            if(isUpdatingRow){
+                currentFormFields.add(getSelectedPersistentId().toString());
+            } else {
+                IGenericService srv = getMatchingService();
+                Long nextVal = (srv.loadCurrSequenceIdKey() + 1);
+                currentFormFields.add(nextVal.toString());
+            }
             currentFormFields.add(inputProductTitle.getText());
             currentFormFields.add(inputProductIdCode.getText());
             currentFormFields.add(inputProductValue.getText());
@@ -755,14 +779,14 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
     public Persistent getMatchingPersistentByIdKey() {
         if (isConsumerForm) {
-            Long idNumber = (Long) tblConsumer.getValueAt(getSelectedRow(), 1);
+            Long id = (Long) tblConsumer.getValueAt(getSelectedRow(), 0);
 
-            Consumer consumer = this.consumerService.findByIdNumber(idNumber);
+            Consumer consumer = this.consumerService.find(id);
 
             return consumer;
         } else {
-            String idCode = (String) tblProduct.getValueAt(getSelectedRow(), 1);
-            Product product = this.productService.findByIdCode(idCode);
+            Long id = (Long) tblProduct.getValueAt(getSelectedRow(), 0);
+            Product product = this.productService.find(id);
             return product;
         }
     }
@@ -783,7 +807,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
             inputProductTitle.setText(product.getTitle());
             inputProductIdCode.setText(product.getIdCode());
-            inputProductValue.setText(product.getValue().toString());
+            inputProductValue.setText(product.getPrice().toString());
             inputProductDescription.setText(product.getDescription());
         }
     }
@@ -792,18 +816,20 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         //if current form is consumer`s do the following:
         if (isConsumerForm) {
             Consumer consumer = (Consumer) persistent;
-            model.addRow(new Object[]{consumer.getName(), consumer.getIdNumber(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
+            model.addRow(new Object[]{consumer.getId(), consumer.getName(), consumer.getIdNumber(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
             //TODO: create differentiating clausules and checks for different objects
         } else {
             Product product = (Product) persistent;
-            productTblModel.addRow(new Object[]{product.getTitle(), product.getIdCode(), product.getValue(), product.getDescription()});
+            productTblModel.addRow(new Object[]{product.getId(), product.getTitle(), product.getIdCode(), product.getPrice(), product.getDescription()});
         }
     }
 
     public void getCurrentSelectedPersistent(JTable tblPersistent) {
         setSelectedRow(tblPersistent.getSelectedRow());
 
+
         Persistent persistent = getMatchingPersistentByIdKey();
+        setSelectedPersistentId(persistent.getId());
 
         if (persistent != null) {
             fillMatchingPersistentFields(persistent);
@@ -820,10 +846,10 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
         if (isConsumerForm) {
             Consumer consumer = (Consumer) persistent;
-            consumerService.delete(consumer.getIdNumber());
+            consumerService.delete(consumer.getId());
         } else {
             Product product = (Product) persistent;
-            productService.delete(product.getIdCode());
+            productService.delete(product.getId());
         }
 
         model.removeRow(getSelectedRow());
@@ -848,13 +874,21 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
             btnClearFields.setText("Clear");
             setIsUpdatingRow(false);
             setSelectedRow(null);
+            setSelectedPersistentId(null);
             clearFields();
 
         } else {
 
             Persistent persistent = genMatchingObjectEntry(getCurrentFormFields(), tableObjectName);
 
-            Boolean isRegistered = getMatchingService().register(persistent);
+            Boolean isRegistered = false;
+
+            try {
+                isRegistered = getMatchingService().register(persistent);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
             if (isRegistered) {
                 addPersistentEntryAsRow(persistent);

@@ -4,22 +4,26 @@
  */
 package br.com.j_fborges.service;
 
-import br.com.j_fborges.domain.Consumer;
 import br.com.j_fborges.domain.Product;
-import br.com.j_fborges.exception.TypeKeyNotFoundException;
 import br.com.j_fborges.service.generic.IGenericService;
+
+import java.sql.SQLException;
+import java.util.Collection;
 
 /**
  *
  * @author root
  */
+
 public interface IProductService extends IGenericService<Product, String>{
     
-    Boolean register(Product product) throws TypeKeyNotFoundException;
+    Boolean register(Product product) throws SQLException;
 
-    Product findByIdCode(String idCode);
+    void delete(Long id);
 
-    void delete(String idCode);
+    void update(Product product);
 
-    void update(Product product) throws TypeKeyNotFoundException;
+    public Collection<Product> loadProducts();
+
+    public Product find(Product product);
 }

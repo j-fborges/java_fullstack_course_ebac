@@ -4,7 +4,6 @@
  */
 package br.com.j_fborges.factory;
 
-import br.com.j_fborges.domain.Consumer;
 import br.com.j_fborges.domain.Persistent;
 import br.com.j_fborges.domain.Product;
 import br.com.j_fborges.exception.InvalidDataException;
@@ -18,10 +17,14 @@ public class ProductFactory implements PersistentFactory {
     @Override
     public Persistent createObject(String parsedInputs[]) throws InvalidDataException {
         try {
-            return new Product(parsedInputs[0],parsedInputs[1],parsedInputs[2],parsedInputs[3]);
+            return new Product(parsedInputs[0], parsedInputs[1], parsedInputs[2], parsedInputs[3], parsedInputs[4]);
         } catch(IndexOutOfBoundsException e) {
             throw new InvalidDataException("Product Data are invalid");
         }
     }
-    
+
+    @Override
+    public Persistent createEmptyObject() {
+        return new Product();
+    }
 }

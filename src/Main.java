@@ -1,5 +1,4 @@
 
-import br.com.j_fborges.dao.SingletonGenericDAOMap;
 import gui.ConsumerRegistrationTable;
 
 /**

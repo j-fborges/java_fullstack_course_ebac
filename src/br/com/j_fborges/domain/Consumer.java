@@ -1,13 +1,16 @@
 package br.com.j_fborges.domain;
 
-import br.com.j_fborges.annotation.TypeIDKey;
+import br.com.j_fborges.annotation.MatchingDAOClass;
+import br.com.j_fborges.annotation.MatchingPersistentFactory;
 
 import java.util.Objects;
 
+@MatchingPersistentFactory("br.com.j_fborges.factory.ConsumerFactory")
+@MatchingDAOClass("br.com.j_fborges.dao.ConsumerDAO")
 public class Consumer implements Persistent{
 
+    private Long id;
     private String name;
-    @TypeIDKey("getIdNumber")
     private Long idNumber;
     private Long tel;
     private String address;
@@ -15,7 +18,8 @@ public class Consumer implements Persistent{
     private String city;
     private String state;
 
-    public Consumer(String name, String idNumber, String tel, String address, String addressNumber, String city, String state) {
+    public Consumer(String id, String name, String idNumber, String tel, String address, String addressNumber, String city, String state) {
+        this.id = Long.valueOf(id);
         this.name = name;
         this.idNumber = Long.valueOf(idNumber);
         this.tel = Long.valueOf(tel);
@@ -24,6 +28,11 @@ public class Consumer implements Persistent{
         this.city = city;
         this.state = state;
     }
+
+    public Consumer() {
+
+    }
+
 
     public String getName() {
         return name;
@@ -81,10 +90,6 @@ public class Consumer implements Persistent{
         this.state = state;
     }
 
-    public Long getIdCode(){
-        return getIdNumber();
-    }
-
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -98,4 +103,13 @@ public class Consumer implements Persistent{
     }
 
 
+    @Override
+    public Long getId() {
+        return this.id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

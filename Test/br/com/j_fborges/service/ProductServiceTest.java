@@ -8,9 +8,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.math.BigDecimal;
-
-import static org.junit.Assert.*;
+import java.sql.SQLException;
 
 public class ProductServiceTest {
 
@@ -25,29 +23,29 @@ public class ProductServiceTest {
 
     @Before
     public void init() {
-        product = new Product("Product 1", "A1", "10.32", "Product 1");
+        product = new Product("999", "Product 1", "A1", "10.32", "Product 1");
 
     }
 
     @Test
-    public void findByIdCode() {
-        Product productr = this.productService.findByIdCode(product.getIdCode());
+    public void find() {
+        Product productr = this.productService.find(product.getId());
         Assert.assertNotNull(productr);
     }
 
     @Test
-    public void register() throws TypeKeyNotFoundException {
+    public void register() throws SQLException {
         Boolean expected = productService.register(product);
         Assert.assertTrue(expected);
     }
 
     @Test
-    public void excluir() {
-        productService.delete(product.getIdCode());
+    public void delete() {
+        productService.delete(product.getId());
     }
 
     @Test
-    public void alterarCliente() throws TypeKeyNotFoundException {
+    public void updateProduct() {
         product.setTitle("Product 2");
         productService.update(product);
 
