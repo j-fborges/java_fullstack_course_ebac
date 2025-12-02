@@ -29,6 +29,7 @@ public class ConsumerServiceTest {
                 "99",
                 "Rodrigo",
                 "123123484",
+                "ro@ro.com0",
                 "1199999999",
                 "End",
                 "10",

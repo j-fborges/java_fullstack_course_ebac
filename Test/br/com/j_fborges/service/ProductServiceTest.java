@@ -23,7 +23,7 @@ public class ProductServiceTest {
 
     @Before
     public void init() {
-        product = new Product("999", "Product 1", "A1", "10.32", "Product 1");
+        product = new Product("999", "Product 1", "A1", "10.32", "Foo", "Product 1");
 
     }
 

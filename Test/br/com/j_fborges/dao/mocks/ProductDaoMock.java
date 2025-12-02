@@ -30,7 +30,7 @@ public class ProductDaoMock implements IProductDAO {
 
     @Override
     public Product find(Long id) {
-        return new Product(id.toString(), "Foo", "fygjyg86486", "10.02", "BarFoo");
+        return new Product(id.toString(), "Foo", "fygjyg86486", "10.02", "Bar", "BarFoo");
     }
 
     @Override
@@ -39,62 +39,7 @@ public class ProductDaoMock implements IProductDAO {
     }
 
     @Override
-    public void addInsertParams(PreparedStatement stm, Product product) throws SQLException, NoSuchMethodException {
-
-    }
-
-    @Override
-    public void addUpdateParams(PreparedStatement stm, Product product) throws SQLException, NoSuchMethodException {
-
-    }
-
-    @Override
-    public void addDeleteParams(PreparedStatement stm, Product product) throws SQLException, NoSuchMethodException {
-
-    }
-
-    @Override
-    public void addSelectParams(PreparedStatement stm, Product product) throws SQLException, NoSuchMethodException {
-
-    }
-
-    @Override
-    public String getSqlInsert() {
-        return "";
-    }
-
-    @Override
-    public String getSqlUpdate() {
-        return "";
-    }
-
-    @Override
-    public String getSqlDelete() {
-        return "";
-    }
-
-    @Override
-    public String getSqlSelect() {
-        return "";
-    }
-
-    @Override
-    public String getSqlSelectAll() {
-        return "";
-    }
-
-    @Override
-    public String getSqlCurrSequenceId() {
-        return "";
-    }
-
-    @Override
     public Long getCurrSequenceIdKey() {
         return 0L;
-    }
-
-    @Override
-    public String[] fieldsToStringArray(Product product, ResultSet rs) throws SQLException {
-        return new String[0];
     }
 }

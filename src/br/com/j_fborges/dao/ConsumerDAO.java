@@ -21,16 +21,6 @@ public class ConsumerDAO extends GenericDAO<Consumer, Long> implements IConsumer
     }
 
     @Override
-    public void updateData(Consumer consumer, Consumer entityRegistered) {
-        entityRegistered.setName(consumer.getName());
-        entityRegistered.setTel(consumer.getTel());
-        entityRegistered.setAddressNumber(consumer.getAddressNumber());
-        entityRegistered.setAddress(consumer.getAddress());
-        entityRegistered.setCity(consumer.getCity());
-        entityRegistered.setState(consumer.getState());
-    }
-
-    @Override
     public String getSqlCurrSequenceId(){
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT last_value FROM CONSUMER_ID_SEQ");
@@ -41,8 +31,8 @@ public class ConsumerDAO extends GenericDAO<Consumer, Long> implements IConsumer
     public String getSqlInsert(){
 
         StringBuilder sb = new StringBuilder();
-        sb.append("INSERT INTO TB_CONSUMERS (ID, ID_NUMBER, NAME, TELEPHONE, ADDRESS, ADDRESS_NUMBER, CITY, STATE) ");
-        sb.append("VALUES (nextval('CONSUMER_ID_SEQ'),?,?,?,?,?,?,?) ");
+        sb.append("INSERT INTO TB_CONSUMERS (ID, ID_NUMBER, NAME, EMAIL, TELEPHONE, ADDRESS, ADDRESS_NUMBER, CITY, STATE) ");
+        sb.append("VALUES (nextval('CONSUMER_ID_SEQ'),?,?,?,?,?,?,?,?) ");
         return sb.toString();
     }
 
@@ -124,7 +114,7 @@ public class ConsumerDAO extends GenericDAO<Consumer, Long> implements IConsumer
         String state = rs.getString("STATE");
 
 
-        return new String[]{id.toString(), name, email, idNumber.toString(), tel.toString(), address, addressNumber.toString(), city, state};
+        return new String[]{id.toString(), name,idNumber.toString(), email, tel.toString(), address, addressNumber.toString(), city, state};
     }
 
     @Override

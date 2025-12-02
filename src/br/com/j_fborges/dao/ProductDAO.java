@@ -24,14 +24,6 @@ public class ProductDAO extends GenericDAO<Product, String> implements IProductD
     }
 
     @Override
-    public void updateData(Product entity, Product entityRegistered) {
-        entityRegistered.setIdCode(entity.getIdCode());
-        entityRegistered.setDescription(entity.getDescription());
-        entityRegistered.setTitle(entity.getTitle());
-        entityRegistered.setPrice(entity.getPrice());
-    }
-
-    @Override
     public String getSqlCurrSequenceId(){
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT last_value FROM PRODUCT_ID_SEQ");
@@ -42,8 +34,8 @@ public class ProductDAO extends GenericDAO<Product, String> implements IProductD
     public String getSqlInsert(){
 
         StringBuilder sb = new StringBuilder();
-        sb.append("INSERT INTO TB_PRODUCTS (ID, ID_CODE, TITLE, PRICE, CATEGORY DESCRIPTION) ");
-        sb.append("VALUES (nextval('PRODUCT_ID_SEQ'),?,?,?,?) ");
+        sb.append("INSERT INTO TB_PRODUCTS (ID, ID_CODE, TITLE, PRICE, CATEGORY, DESCRIPTION) ");
+        sb.append("VALUES (nextval('PRODUCT_ID_SEQ'),?,?,?,?,?) ");
         return sb.toString();
     }
 
@@ -85,8 +77,9 @@ public class ProductDAO extends GenericDAO<Product, String> implements IProductD
         stm.setString(1, product.getTitle());
         stm.setString(2, product.getIdCode());
         stm.setBigDecimal(3, product.getPrice());
-        stm.setString(4, product.getDescription());
-        stm.setLong(5, product.getId());
+        stm.setString(4, product.getCategory());
+        stm.setString(5, product.getDescription());
+        stm.setLong(6, product.getId());
     }
 
     @Override

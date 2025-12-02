@@ -19,8 +19,6 @@ public abstract class GenericDAO<T extends Persistent, E extends Serializable> i
 
     public abstract Class<T> getClassType();
 
-    public abstract void updateData(T entity, T entityRegistered);
-
     @Override
     public Boolean create(T entity) {
         Integer result = null;

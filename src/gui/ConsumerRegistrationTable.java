@@ -706,17 +706,17 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
     private void clearFields() {
         if (isConsumerForm) {
-            RegistrationTableController.clearFields(inputConsumerName, inputConsumerIdNumber, inputConsumerTel, inputConsumerAddress, inputConsumerAddressNumber, inputConsumerCity, inputConsumerState);
+            RegistrationTableController.clearFields(inputConsumerName, inputConsumerIdNumber, inputConsumerEmail, inputConsumerTel, inputConsumerAddress, inputConsumerAddressNumber, inputConsumerCity, inputConsumerState);
         } else {
-            RegistrationTableController.clearFields(inputProductTitle, inputProductIdCode, inputProductValue, inputProductDescription);
+            RegistrationTableController.clearFields(inputProductTitle, inputProductIdCode, inputProductValue, inputProductCategory, inputProductDescription);
         }
     }
 
     private void initCustomComponents() {
         model.addColumn("Id");
         model.addColumn("Name");
-        model.addColumn("Email");
         model.addColumn("Id Number");
+        model.addColumn("Email");
         model.addColumn("Telephone");
         model.addColumn("Address");
         model.addColumn("Address Number");
@@ -763,6 +763,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
             }
             currentFormFields.add(inputConsumerName.getText());
             currentFormFields.add(inputConsumerIdNumber.getText());
+            currentFormFields.add(inputConsumerEmail.getText());
             currentFormFields.add(inputConsumerTel.getText());
             currentFormFields.add(inputConsumerAddress.getText());
             currentFormFields.add(inputConsumerAddressNumber.getText());
@@ -779,6 +780,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
             currentFormFields.add(inputProductTitle.getText());
             currentFormFields.add(inputProductIdCode.getText());
             currentFormFields.add(inputProductValue.getText());
+            currentFormFields.add(inputProductCategory.getText());
             currentFormFields.add(inputProductDescription.getText());
         }
 
@@ -827,6 +829,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
 
             inputConsumerName.setText(consumer.getName());
             inputConsumerIdNumber.setText(consumer.getIdNumber().toString());
+            inputConsumerEmail.setText(consumer.getEmail());
             inputConsumerTel.setText(consumer.getTel().toString());
             inputConsumerAddress.setText(consumer.getAddress());
             inputConsumerAddressNumber.setText(consumer.getAddressNumber().toString());
@@ -838,6 +841,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
             inputProductTitle.setText(product.getTitle());
             inputProductIdCode.setText(product.getIdCode());
             inputProductValue.setText(product.getPrice().toString());
+            inputProductCategory.setText(product.getCategory());
             inputProductDescription.setText(product.getDescription());
         }
     }
@@ -846,11 +850,11 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         //if current form is consumer`s do the following:
         if (isConsumerForm) {
             Consumer consumer = (Consumer) persistent;
-            model.addRow(new Object[]{consumer.getId(), consumer.getName(), consumer.getIdNumber(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
+            model.addRow(new Object[]{consumer.getId(), consumer.getName(), consumer.getIdNumber(), consumer.getEmail(), consumer.getTel(), consumer.getAddress(), consumer.getAddressNumber(), consumer.getCity(), consumer.getState()});
             //TODO: create differentiating clausules and checks for different objects
         } else {
             Product product = (Product) persistent;
-            productTblModel.addRow(new Object[]{product.getId(), product.getTitle(), product.getIdCode(), product.getPrice(), product.getDescription()});
+            productTblModel.addRow(new Object[]{product.getId(), product.getTitle(), product.getIdCode(), product.getPrice(), product.getCategory(), product.getDescription()});
         }
     }
 

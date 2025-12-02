@@ -22,12 +22,6 @@ public class SaleDAO extends GenericDAO<Sale, String> implements ISaleDao {
     }
 
     @Override
-    public void updateData(Sale sale, Sale saleRegistered) {
-        saleRegistered.setCode(sale.getCode());
-        saleRegistered.setStatus(sale.getStatus());
-    }
-
-    @Override
     public Integer destroy(Long id) {
         throw new UnsupportedOperationException("OPERATION NOT PERMITTED");
     }

@@ -19,7 +19,7 @@ public class ProductDAOTest {
     public void init() throws SQLException {
         this.productDAO = new ProductDAO();
         nextProductId = productDAO.getCurrSequenceIdKey() + 1;
-        this.product = new Product(nextProductId.toString(), "Bacon Strips", "k21w32", "22.04", "Delicious bacon strips");
+        this.product = new Product(nextProductId.toString(), "Bacon Strips", "k21w32", "22.04", "Food", "Delicious bacon strips");
         this.productDAO.create(this.product);
     }
 
@@ -29,15 +29,16 @@ public class ProductDAOTest {
 
     @Test
     public void getClassType() {
-        assertEquals("ProductDAO", productDAO.getClass().getSimpleName());
+        ProductDAO newProductDao = (ProductDAO) productDAO;
+        assertEquals(Product.class, newProductDao.getClassType());
         reset();
     }
 
     @Test
     public void updateData() {
 
-        Product expected = new Product(productDAO.getCurrSequenceIdKey().toString(), "Corn Starch", "k21w32", "16.04", "The ingredient you need");
-        Product notExpected = new Product("0", "Mapple Syrup", "u87t14", "10.21", "Make nice drinks");
+        Product expected = new Product(productDAO.getCurrSequenceIdKey().toString(), "Corn Starch", "k21w32", "16.04", "Food", "The ingredient you need");
+        Product notExpected = new Product("0", "Mapple Syrup", "u87t14", "10.21", "Food", "Make nice drinks");
 
         productDAO.update(expected);
         productDAO.update(notExpected);
@@ -45,5 +46,11 @@ public class ProductDAOTest {
         assertNull(productDAO.find(notExpected.getId()));
 
         reset();
+    }
+
+    @Test
+    public void getSqlSelectAll() {
+        ProductDAO newProductDao = (ProductDAO) productDAO;
+        assertEquals("SELECT * FROM TB_PRODUCTS", newProductDao.getSqlSelectAll());
     }
 }

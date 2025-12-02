@@ -1,5 +1,6 @@
 package br.com.j_fborges.dao;
 
+import br.com.j_fborges.dao.generic.GenericDAO;
 import br.com.j_fborges.domain.Consumer;
 import org.junit.After;
 import org.junit.Assert;
@@ -30,6 +31,7 @@ public class ConsumerDAOTest {
                 nextConsumerId.toString(),
                 "Rodrigo",
                 "123123484",
+                "ro@ro.com",
                 "1199999999",
                 "End",
                 "10",
@@ -39,7 +41,8 @@ public class ConsumerDAOTest {
         consumerDao.create(consumer);
     }
 
-    private void reset() {
+    @After
+    public void reset() {
         consumerDao.destroy(nextConsumerId);
     }
 
@@ -56,6 +59,7 @@ public class ConsumerDAOTest {
         Long newNextConsumerId = consumerDao.getCurrSequenceIdKey() + 1;
 
         consumer.setId(newNextConsumerId);
+        consumer.setEmail("foo@bar.com");
         Boolean expectedResult = consumerDao.create(consumer);
         Assert.assertTrue(expectedResult);
 
@@ -76,6 +80,7 @@ public class ConsumerDAOTest {
                 nextConsumerId.toString(),
                 "Manuel",
                 "123123484",
+                "bar@bar.com",
                 "684643234384",
                 "Rua",
                 "60",
@@ -107,6 +112,7 @@ public class ConsumerDAOTest {
                 newNextConsumerId.toString(),
                 "Manuel",
                 "6869646948",
+                "ma@foo.com",
                 "684643234384",
                 "Rua",
                 "60",
@@ -124,6 +130,7 @@ public class ConsumerDAOTest {
                 newestNextConsumerId.toString(),
                 "Manuel",
                 "6869646948",
+                "ma@bar.com",
                 "684643234384",
                 "Rua",
                 "60",
@@ -163,7 +170,8 @@ public class ConsumerDAOTest {
 
     @Test
     public void getSqlCurrSequenceId() {
-        assertEquals("SELECT last_value FROM CONSUMER_ID_SEQ", consumerDao.getSqlCurrSequenceId());
+        ConsumerDAO newConsumerDao = (ConsumerDAO) consumerDao;
+        assertEquals("SELECT last_value FROM CONSUMER_ID_SEQ", newConsumerDao.getSqlCurrSequenceId());
         reset();
     }
 
