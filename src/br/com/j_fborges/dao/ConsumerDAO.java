@@ -3,6 +3,7 @@ package br.com.j_fborges.dao;
 import br.com.j_fborges.dao.generic.GenericDAO;
 import br.com.j_fborges.domain.Consumer;
 import br.com.j_fborges.domain.Persistent;
+import br.com.j_fborges.factory.ConsumerFactory;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -49,7 +50,7 @@ public class ConsumerDAO extends GenericDAO<Consumer, Long> implements IConsumer
     public String getSqlUpdate() {
         StringBuilder sb = new StringBuilder();
         sb.append("UPDATE TB_CONSUMERS ");
-        sb.append("SET NAME = ?, ID_NUMBER = ?, TELEPHONE = ?, ADDRESS = ?, ADDRESS_NUMBER = ?, CITY = ?, STATE = ? ");
+        sb.append("SET NAME = ?, ID_NUMBER = ?, EMAIL = ?, TELEPHONE = ?, ADDRESS = ?, ADDRESS_NUMBER = ?, CITY = ?, STATE = ? ");
         sb.append("WHERE ID = ?");
         return sb.toString();
     }
@@ -82,12 +83,13 @@ public class ConsumerDAO extends GenericDAO<Consumer, Long> implements IConsumer
         Consumer consumer = entity;
         stm.setString(1, consumer.getName());
         stm.setLong(2, consumer.getIdNumber());
-        stm.setLong(3, consumer.getTel());
-        stm.setString(4, consumer.getAddress());
-        stm.setInt(5, consumer.getAddressNumber());
-        stm.setString(6, consumer.getCity());
-        stm.setString(7, consumer.getState());
-        stm.setLong(8, consumer.getId());
+        stm.setString(3, consumer.getEmail());
+        stm.setLong(4, consumer.getTel());
+        stm.setString(5, consumer.getAddress());
+        stm.setInt(6, consumer.getAddressNumber());
+        stm.setString(7, consumer.getCity());
+        stm.setString(8, consumer.getState());
+        stm.setLong(9, consumer.getId());
     }
 
     @Override
@@ -96,23 +98,25 @@ public class ConsumerDAO extends GenericDAO<Consumer, Long> implements IConsumer
         Consumer consumer = entity;
         stm.setLong(1, consumer.getIdNumber());
         stm.setString(2, consumer.getName());
-        stm.setLong(3, consumer.getTel());
-        stm.setString(4, consumer.getAddress());
-        stm.setInt(5, consumer.getAddressNumber());
-        stm.setString(6, consumer.getCity());
-        stm.setString(7, consumer.getState());
+        stm.setString(3, consumer.getEmail());
+        stm.setLong(4, consumer.getTel());
+        stm.setString(5, consumer.getAddress());
+        stm.setInt(6, consumer.getAddressNumber());
+        stm.setString(7, consumer.getCity());
+        stm.setString(8, consumer.getState());
     }
 
     @Override
-    public void addSelectParams(PreparedStatement stm, Consumer entity) throws SQLException {
-        stm.setLong(1, entity.getId());
+    public void addSelectParams(PreparedStatement stm, Long id) throws SQLException {
+        stm.setLong(1, id);
     }
 
     @Override
-    public String[] fieldsToStringArray(Consumer entity, ResultSet rs) throws SQLException {
+    public String[] fieldsToStringArray(ResultSet rs) throws SQLException {
         Long id = rs.getLong("ID");
         Long idNumber = rs.getLong("ID_NUMBER");
         String name = rs.getString("NAME");
+        String email = rs.getString("EMAIL");
         Long tel = rs.getLong("TELEPHONE");
         String address = rs.getString("ADDRESS");
         Integer addressNumber = rs.getInt("ADDRESS_NUMBER");
@@ -120,6 +124,12 @@ public class ConsumerDAO extends GenericDAO<Consumer, Long> implements IConsumer
         String state = rs.getString("STATE");
 
 
-        return new String[]{id.toString(), name, idNumber.toString(), tel.toString(), address, addressNumber.toString(), city, state};
+        return new String[]{id.toString(), name, email, idNumber.toString(), tel.toString(), address, addressNumber.toString(), city, state};
+    }
+
+    @Override
+    public Consumer factoryCreateObject(String [] inputs){
+        ConsumerFactory factory = new ConsumerFactory();
+        return (Consumer) factory.createObject(inputs);
     }
 }

@@ -1,12 +1,7 @@
 package br.com.j_fborges.domain;
 
-import br.com.j_fborges.annotation.MatchingDAOClass;
-import br.com.j_fborges.annotation.MatchingPersistentFactory;
-
 import java.math.BigDecimal;
 
-@MatchingPersistentFactory("br.com.j_fborges.factory.ProductFactory")
-@MatchingDAOClass("br.com.j_fborges.dao.ProductDAO")
 public class Product implements Persistent{
 
     private Long id;
@@ -15,19 +10,30 @@ public class Product implements Persistent{
 
     private String title;
 
+    private BigDecimal price;
+
+    private String category;
+
     private String description;
 
-    private BigDecimal price;
-    
-    public Product(String id, String title, String idCode, String price, String description){
+    public Product(String id, String title, String idCode, String price, String category, String description){
         this.id = Long.valueOf(id);
         this.title = title;
         this.idCode = idCode;
         this.price = new BigDecimal(price);
+        this.category = category;
         this.description = description;
     }
 
     public Product(){}
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public String getIdCode() {
         return idCode;

@@ -20,27 +20,5 @@ public interface IGenericDAO <T extends Persistent, E extends Serializable> {
 
     public Collection<T> findAll();
 
-    void addInsertParams(PreparedStatement stm, T entity) throws SQLException, NoSuchMethodException;
-
-    void addUpdateParams(PreparedStatement stm, T entity) throws SQLException, NoSuchMethodException;
-
-    void addDeleteParams(PreparedStatement stm, T entity) throws SQLException, NoSuchMethodException;
-
-    void addSelectParams(PreparedStatement stm, T entity) throws SQLException, NoSuchMethodException;
-
-    String getSqlInsert();
-
-    String getSqlUpdate();
-
-    String getSqlDelete();
-
-    String getSqlSelect();
-
-    String getSqlSelectAll();
-
-    String getSqlCurrSequenceId();
-
     Long getCurrSequenceIdKey();
-
-    public String[] fieldsToStringArray(T entity, ResultSet rs) throws SQLException;
 }

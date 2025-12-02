@@ -687,6 +687,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
     private void initCustomComponents() {
         model.addColumn("Id");
         model.addColumn("Name");
+        model.addColumn("Email");
         model.addColumn("Id Number");
         model.addColumn("Telephone");
         model.addColumn("Address");
@@ -700,6 +701,7 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         productTblModel.addColumn("Title");
         productTblModel.addColumn("Id Code");
         productTblModel.addColumn("Value");
+        productTblModel.addColumn("Category");
         productTblModel.addColumn("Description");
 
         tblProduct.setModel(productTblModel);

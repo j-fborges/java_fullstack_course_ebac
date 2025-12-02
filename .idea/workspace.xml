@@ -5,91 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f50716d4-dc56-42d6-b67a-cf844ada907a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/annotation/MatchingDAOClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/annotation/MatchingPersistentFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ConsumerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ProductDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/ConnectionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/j_fborges/functionalInterface/TriFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_IDE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/4_IDE.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/br/com/j_fborges/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/AllTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/ConsumerMapDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/ConsumerDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/ProductMapDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/ProductDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/SaleMapDAOTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/mocks/ConsumerDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/mocks/ConsumerDaoMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/mocks/ProductDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/dao/mocks/ProductDaoMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/br/com/j_fborges/service/ConsumerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/service/ConsumerServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/br/com/j_fborges/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/br/com/j_fborges/service/ProductServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/annotation/TypeIDKey.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ConsumerMapDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ConsumerSetDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ProductMapDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/SaleMapDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/SingletonGenericDAOMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ConsumerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ConsumerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/SaleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/SaleDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/GenericDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/GenericDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/IGenericDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/dao/generic/IGenericDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Consumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Persistent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Persistent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/ProductQuantity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/ProductQuantity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Sale$Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Sale$Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Sale.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/domain/Sale.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/factory/ConsumerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/factory/ConsumerFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/factory/PersistentFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/factory/PersistentFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/factory/ProductFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/factory/ProductFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/ConsumerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/ConsumerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/IConsumerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/IConsumerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/IProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/generic/GenericService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/generic/GenericService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/generic/IGenericService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/br/com/j_fborges/service/generic/IGenericService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/4_IDE/gui/ConsumerRegistrationTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/dao/ConsumerMapDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/dao/ProductMapDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/dao/SaleMapDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/dao/mocks/ConsumerDaoMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/dao/mocks/ConsumerDaoMock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/dao/mocks/ProductDaoMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/dao/mocks/ProductDaoMock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/service/ConsumerServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/service/ConsumerServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/service/ProductServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/4_IDE/br/com/j_fborges/service/ProductServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/annotation/TypeIDKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ConsumerMapDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ConsumerSetDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ProductMapDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SaleMapDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SaleDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SingletonGenericDAOMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ConsumerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ConsumerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SaleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/SaleDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/GenericDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/IGenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/dao/generic/IGenericDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Persistent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Persistent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/domain/ProductQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/ProductQuantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/domain/Sale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/factory/ConsumerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/factory/ConsumerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/factory/PersistentFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/factory/PersistentFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/factory/ProductFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/factory/ProductFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/service/ConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/service/ConsumerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/service/IConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/service/IConsumerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/service/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/service/generic/GenericService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/service/generic/GenericService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/j_fborges/service/generic/IGenericService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/j_fborges/service/generic/IGenericService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/ConsumerRegistrationTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ConsumerRegistrationTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,54 +63,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Application.Main.executor": "Run",
-    "Application.PrimeiraClasse.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.AllTests.executor": "Coverage",
-    "JUnit.ConsumerDAOTest.addUpdateParams.executor": "Run",
-    "JUnit.ConsumerDAOTest.executor": "Run",
-    "JUnit.ConsumerDAOTest.findAll.executor": "Run",
-    "JUnit.ConsumerDAOTest.getCurrSequenceIdKey.executor": "Run",
-    "JUnit.ConsumerDAOTest.getSqlCurrSequenceId.executor": "Run",
-    "JUnit.ConsumerDAOTest.testGetClassType.executor": "Run",
-    "JUnit.ConsumerDAOTest.update.executor": "Run",
-    "JUnit.ConsumerMapDAOTest.create.executor": "Run",
-    "JUnit.ConsumerMapDAOTest.destroy.executor": "Run",
-    "JUnit.ConsumerMapDAOTest.executor": "Coverage",
-    "JUnit.ConsumerMapDAOTest.find.executor": "Run",
-    "JUnit.ConsumerMapDAOTest.findAll.executor": "Run",
-    "JUnit.ConsumerMapDAOTest.getClassType.executor": "Run",
-    "JUnit.ConsumerMapDAOTest.update.executor": "Run",
-    "JUnit.ConsumerMapDAOTest.updateData.executor": "Run",
-    "JUnit.ConsumerServiceTest.executor": "Run",
-    "JUnit.ProductDAOTest.executor": "Run",
-    "JUnit.ProductDAOTest.updateData.executor": "Debug",
-    "JUnit.ProductMapDAOTest.getClassType.executor": "Run",
-    "JUnit.ProductMapDAOTest.updateData.executor": "Run",
-    "JUnit.ProductServiceTest.executor": "Run",
-    "JUnit.SaleMapDAOTest.doesNotAddProductsToCompleteSale.executor": "Run",
-    "JUnit.SaleMapDAOTest.doesNotDestroySale.executor": "Run",
-    "JUnit.SaleMapDAOTest.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "consumer__crud__jdbc",
-    "onboarding.tips.debug.path": "//wsl.localhost/Ubuntu3/home/study/ebac/fullStackJava/backEnd/4_IDE/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PrimeiraClasse.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.AllTests.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ConsumerDAOTest.addUpdateParams.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.findAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.getCurrSequenceIdKey.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.getSqlCurrSequenceId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.testGetClassType.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.update.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.destroy.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.find.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.findAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.getClassType.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.update.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.updateData.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductDAOTest.updateData.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ProductMapDAOTest.getClassType.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductMapDAOTest.updateData.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SaleMapDAOTest.doesNotAddProductsToCompleteSale.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SaleMapDAOTest.doesNotDestroySale.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SaleMapDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;consumer__crud__jdbc&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;//wsl.localhost/Ubuntu3/home/study/ebac/fullStackJava/backEnd/4_IDE/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.j_fborges.factory" />
@@ -204,7 +134,7 @@
       <recent name="br.com.j_fborges.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AllTests">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="4_IDE" />
@@ -274,10 +204,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AllTests" />
         <item itemvalue="JUnit.ProductServiceTest" />
         <item itemvalue="JUnit.ConsumerServiceTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ConsumerDAOTest" />
       </list>
     </recent_temporary>
@@ -299,7 +229,7 @@
     <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_loadNames.exec" NAME="NameSorterTest.loadNames Coverage Results" MODIFIED="1763651763172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>br.com.j_fborges.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$AllTests.ic" NAME="AllTests Coverage Results" MODIFIED="1764084283529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$AllTests.ic" NAME="AllTests Coverage Results" MODIFIED="1764616488090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>br.com.j_fborges.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest.exec" NAME="NameSorterTest Coverage Results" MODIFIED="1763658125951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

@@ -40,7 +40,7 @@ public class ConsumerDaoMock implements IConsumerDAO {
     }
 
     @Override
-    public void addInsertParams(PreparedStatement stm, Consumer consumer) throws SQLException, NoSuchMethodException {
+    protected void addInsertParams(PreparedStatement stm, Consumer consumer) throws SQLException {
 
     }
 
