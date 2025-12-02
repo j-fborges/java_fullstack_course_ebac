@@ -143,6 +143,8 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         lblConsumerAddressNumber = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblConsumer = new javax.swing.JTable();
+        lblConsumerEmail = new javax.swing.JLabel();
+        inputConsumerEmail = new javax.swing.JTextField();
         jPanelProduct = new javax.swing.JPanel();
         lblProductTitle = new javax.swing.JLabel();
         inputProductTitle = new javax.swing.JTextField();
@@ -155,6 +157,8 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         inputProductDescription = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblProduct = new javax.swing.JTable();
+        lblProductCategory = new javax.swing.JLabel();
+        inputProductCategory = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItemExit = new javax.swing.JMenuItem();
@@ -297,14 +301,16 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblConsumer);
 
+        lblConsumerEmail.setText("Email:");
+
         javax.swing.GroupLayout jPanelConsumerLayout = new javax.swing.GroupLayout(jPanelConsumer);
         jPanelConsumer.setLayout(jPanelConsumerLayout);
         jPanelConsumerLayout.setHorizontalGroup(
             jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelConsumerLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
+                .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1295, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelConsumerLayout.createSequentialGroup()
                         .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanelConsumerLayout.createSequentialGroup()
@@ -312,23 +318,19 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(inputConsumerTel))
                             .addGroup(jPanelConsumerLayout.createSequentialGroup()
-                                .addComponent(lblConsumerIdNumber)
-                                .addGap(18, 18, 18)
-                                .addComponent(inputConsumerIdNumber))
-                            .addGroup(jPanelConsumerLayout.createSequentialGroup()
                                 .addComponent(lblConsumerName)
                                 .addGap(18, 18, 18)
-                                .addComponent(inputConsumerName, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(inputConsumerName, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanelConsumerLayout.createSequentialGroup()
-                                .addComponent(lblConsumerAddress)
+                                .addComponent(lblConsumerEmail)
                                 .addGap(18, 18, 18)
-                                .addComponent(inputConsumerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(inputConsumerEmail)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelConsumerLayout.createSequentialGroup()
+                                .addComponent(lblConsumerIdNumber)
                                 .addGap(18, 18, 18)
-                                .addComponent(lblConsumerAddressNumber)
-                                .addGap(18, 18, 18)
-                                .addComponent(inputConsumerAddressNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(inputConsumerIdNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanelConsumerLayout.createSequentialGroup()
                                 .addComponent(lblConsumerCity)
                                 .addGap(18, 18, 18)
@@ -336,32 +338,48 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(lblConsumerState)
                                 .addGap(18, 18, 18)
-                                .addComponent(inputConsumerState, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(56, Short.MAX_VALUE))
+                                .addComponent(inputConsumerState, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelConsumerLayout.createSequentialGroup()
+                                .addComponent(lblConsumerAddress)
+                                .addGap(18, 18, 18)
+                                .addComponent(inputConsumerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblConsumerAddressNumber)
+                                .addGap(18, 18, 18)
+                                .addComponent(inputConsumerAddressNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
         jPanelConsumerLayout.setVerticalGroup(
             jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelConsumerLayout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addContainerGap(53, Short.MAX_VALUE)
                 .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblConsumerName)
                     .addComponent(inputConsumerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblConsumerAddress)
-                    .addComponent(inputConsumerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblConsumerAddressNumber)
-                    .addComponent(inputConsumerAddressNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblConsumerIdNumber)
-                    .addComponent(inputConsumerIdNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblConsumerCity)
-                    .addComponent(inputConsumerCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblConsumerState)
-                    .addComponent(inputConsumerState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConsumerTel)
-                    .addComponent(inputConsumerTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputConsumerIdNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelConsumerLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblConsumerTel)
+                            .addComponent(inputConsumerTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblConsumerEmail)
+                        .addComponent(inputConsumerEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelConsumerLayout.createSequentialGroup()
+                        .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblConsumerAddress)
+                            .addComponent(inputConsumerAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblConsumerAddressNumber)
+                            .addComponent(inputConsumerAddressNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelConsumerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblConsumerCity)
+                            .addComponent(inputConsumerCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblConsumerState)
+                            .addComponent(inputConsumerState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
@@ -411,29 +429,36 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(tblProduct);
 
+        lblProductCategory.setText("Category:");
+
         javax.swing.GroupLayout jPanelProductLayout = new javax.swing.GroupLayout(jPanelProduct);
         jPanelProduct.setLayout(jPanelProductLayout);
         jPanelProductLayout.setHorizontalGroup(
             jPanelProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelProductLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(jPanelProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblProductDescription)
-                    .addGroup(jPanelProductLayout.createSequentialGroup()
-                        .addComponent(lblProductIdCode)
-                        .addGap(18, 18, 18)
-                        .addComponent(inputProductIdCode, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblProductTitle)
-                        .addGap(18, 18, 18)
-                        .addComponent(inputProductTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblProductValue)
-                        .addGap(18, 18, 18)
-                        .addComponent(inputProductValue, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane2)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 877, Short.MAX_VALUE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGroup(jPanelProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblProductDescription)
+                        .addGroup(jPanelProductLayout.createSequentialGroup()
+                            .addComponent(lblProductIdCode)
+                            .addGap(18, 18, 18)
+                            .addComponent(inputProductIdCode, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(lblProductTitle)
+                            .addGap(18, 18, 18)
+                            .addComponent(inputProductTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(lblProductValue)
+                            .addGap(18, 18, 18)
+                            .addComponent(inputProductValue, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(lblProductCategory)
+                            .addGap(18, 18, 18)
+                            .addComponent(inputProductCategory, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
+                        .addComponent(jScrollPane2))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
         jPanelProductLayout.setVerticalGroup(
             jPanelProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -445,7 +470,9 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
                     .addComponent(lblProductIdCode)
                     .addComponent(inputProductIdCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblProductValue)
-                    .addComponent(inputProductValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputProductValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblProductCategory)
+                    .addComponent(inputProductCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(lblProductDescription)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -476,19 +503,16 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelAppPages, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelAppHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jPanelAppPages, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
+            .addComponent(jPanelAppHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelAppHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanelAppPages, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jPanelAppPages, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -640,10 +664,12 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
     private javax.swing.JTextField inputConsumerAddress;
     private javax.swing.JTextField inputConsumerAddressNumber;
     private javax.swing.JTextField inputConsumerCity;
+    private javax.swing.JTextField inputConsumerEmail;
     private javax.swing.JTextField inputConsumerIdNumber;
     private javax.swing.JTextField inputConsumerName;
     private javax.swing.JTextField inputConsumerState;
     private javax.swing.JTextField inputConsumerTel;
+    private javax.swing.JTextField inputProductCategory;
     private javax.swing.JTextArea inputProductDescription;
     private javax.swing.JTextField inputProductIdCode;
     private javax.swing.JTextField inputProductTitle;
@@ -663,10 +689,12 @@ public class ConsumerRegistrationTable extends javax.swing.JFrame {
     private javax.swing.JLabel lblConsumerAddress;
     private javax.swing.JLabel lblConsumerAddressNumber;
     private javax.swing.JLabel lblConsumerCity;
+    private javax.swing.JLabel lblConsumerEmail;
     private javax.swing.JLabel lblConsumerIdNumber;
     private javax.swing.JLabel lblConsumerName;
     private javax.swing.JLabel lblConsumerState;
     private javax.swing.JLabel lblConsumerTel;
+    private javax.swing.JLabel lblProductCategory;
     private javax.swing.JLabel lblProductDescription;
     private javax.swing.JLabel lblProductIdCode;
     private javax.swing.JLabel lblProductTitle;
