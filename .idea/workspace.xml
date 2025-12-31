@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f50716d4-dc56-42d6-b67a-cf844ada907a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/mavenHomeManager.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_fullstack_course_ebac.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-maven-app.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+        <option value="Exception" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;j-fborges&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:j-fborges/java_fullstack_course_ebac.git&quot;,
+    &quot;accountId&quot;: &quot;724abc8b-a34f-4cc2-adb2-636844db3352&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="34XTxYaQTL34aAdTFdE2BdXHkvu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PrimeiraClasse.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.AllTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.addUpdateParams.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.findAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.getCurrSequenceIdKey.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.getSqlCurrSequenceId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.testGetClassType.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerDAOTest.update.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.destroy.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.find.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.findAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.getClassType.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.update.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerMapDAOTest.updateData.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsumerServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductDAOTest.updateData.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductMapDAOTest.getClassType.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductMapDAOTest.updateData.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SaleDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SaleMapDAOTest.doesNotAddProductsToCompleteSale.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SaleMapDAOTest.doesNotDestroySale.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SaleMapDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;java__maven&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ebacCoverages/java_fullstack_course_ebac&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;//wsl.localhost/Ubuntu3/home/study/ebac/fullStackJava/backEnd/4_IDE/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.j_fborges.factory" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ebacCoverages\java_fullstack_course_ebac\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ebacCoverages\java_fullstack_course_ebac" />
+      <recent name="D:\ebacCoverages\java_fullstack_course_ebac\" />
+      <recent name="D:\ebacCoverages\java_fullstack_course_ebac\src\main\java" />
+      <recent name="D:\ebacCoverages\java_fullstack_course_ebac\src" />
+      <recent name="D:\ebacCoverages\java_fullstack_course_ebac\lib" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.j_fborges.service" />
+      <recent name="br.com.j_fborges.dao" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.com.j_fborges.dao" />
+      <recent name="br.com.j_fborges.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AllTests">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="java_fullstackk_course_ebac" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AllTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java_fullstackk_course_ebac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.AllTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java_fullstackk_course_ebac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges.dao" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.dao.ProductDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDAOTest.updateData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java_fullstackk_course_ebac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges.dao" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.dao.ProductDAOTest" />
+      <option name="METHOD_NAME" value="updateData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaleDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java_fullstackk_course_ebac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.j_fborges.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.j_fborges.dao" />
+      <option name="MAIN_CLASS_NAME" value="br.com.j_fborges.dao.SaleDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="java_fullstackk_course_ebac" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="java_fullstackk_course_ebac" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ProductDAOTest.updateData" />
+      <item itemvalue="JUnit.SaleDAOTest" />
+      <item itemvalue="JUnit.ProductDAOTest" />
+      <item itemvalue="JUnit.AllTests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AllTests" />
+        <item itemvalue="JUnit.ProductDAOTest.updateData" />
+        <item itemvalue="JUnit.ProductDAOTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SaleDAOTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f50716d4-dc56-42d6-b67a-cf844ada907a" name="Changes" comment="" />
+      <created>1761359170641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761359170641</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$AllTests.exec" NAME="AllTests Coverage Results" MODIFIED="1763669391253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_loadNames.exec" NAME="NameSorterTest.loadNames Coverage Results" MODIFIED="1763651763172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$AllTests.ic" NAME="AllTests Coverage Results" MODIFIED="1764698809439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest.exec" NAME="NameSorterTest Coverage Results" MODIFIED="1763658125951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_getNameList.exec" NAME="NameSorterTest.getNameList Coverage Results" MODIFIED="1763578841849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$Main.exec" NAME="Main Coverage Results" MODIFIED="1763651211366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$ConsumerDAOTest.ic" NAME="ConsumerDAOTest Coverage Results" MODIFIED="1764609880282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.dao.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$NameSorterTest_getNameList.ic" NAME="NameSorterTest.getNameList Coverage Results" MODIFIED="1763574760018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_fullstack_course_ebac$ConsumerMapDAOTest.ic" NAME="ConsumerMapDAOTest Coverage Results" MODIFIED="1764039335469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.j_fborges.dao.*</FILTER>
+    </SUITE>
+  </component>
+</project>
