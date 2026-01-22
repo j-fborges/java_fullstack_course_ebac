@@ -1,0 +1,146 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<h:outputStylesheet>
+            th, td {
+                text-align: center;
+            }
+
+            h3 {
+                margin-top: 0;
+                text-align: center;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing: border-box;
+            }
+
+        </h:outputStylesheet>
+	</h:head>
+	<h:body>
+		<h:form id="menu">
+			<p:menubar>
+				<p:submenu label="Registration" icon="pi pi-fw pi-user">
+					<p:menuitem value="Consumer" icon="pi pi-fw pi-user-plus" action="#{indexController.redirectConsumer()}"/>
+					<p:menuitem value="Product" icon="pi pi-fw pi-inbox" action="#{indexController.redirectProduct()}"/>
+				</p:submenu>
+				<p:submenu label="Sale" icon="pi pi-fw pi-shopping-cart">
+					<p:menuitem value="Sale" icon="pi pi-fw pi-shopping-cart" action="#{indexController.redirectSale()}"/>
+				</p:submenu>
+			</p:menubar>
+		</h:form>
+		<p:outputPanel>
+			<h3>Products registered</h3>
+			<h:outputText value="#{probe != null ? 'CDI OK' : 'CDI FAIL'}" />
+			<div class="ui-g">
+				<div class="ui-g-2" />
+				<div class="ui-g-12">
+					<h:form id="products">
+						<p:growl id="growl" sticky="true" />
+
+						<p:dataTable id="productList" var="prod"
+							value="#{productController.products}">
+							<p:column headerText="Id">
+								<h:outputText value="#{prod.id}" />
+							</p:column>
+							
+							<p:column headerText="IdCode">
+								<h:outputText id="idCodeInput" value="#{prod.idCode}" />
+							</p:column>
+
+							<p:column headerText="Title">
+								<h:outputText id="titleInput" value="#{prod.title}" />
+							</p:column>
+
+							<p:column headerText="Description">
+								<h:outputText id="descInput" value="#{prod.description}" />
+							</p:column>
+
+							<p:column headerText="Price">
+								<h:outputText id="valueInput" value="#{prod.price}" />
+							</p:column>
+
+							<p:column>
+								<p:commandButton update="productList add" value="Editar"
+									icon="ui-icon-closethick"
+									action="#{productController.edit(prod)}"
+									styleClass="ui-icon-pencil">
+								</p:commandButton>
+							</p:column>
+							<p:column>
+								<p:commandButton update="productList" value="Delete"
+									icon="ui-icon-closethick"
+									action="#{productController.delete(prod)}"
+									styleClass="ui-priority-primary">
+									<p:confirm header="Atenção" message="Tem certeza que deseja excluir este product?" icon="pi pi-exclamation-triangle"/>
+								</p:commandButton>
+							</p:column>
+						</p:dataTable>
+						<br />
+						<p:confirmDialog global="true" showEffect="fade" hideEffect="fade" responsive="true" width="350">
+				            <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no ui-button-flat"/>
+				            <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" />
+				        </p:confirmDialog>
+					</h:form>
+				</div>
+				<div class="ui-g-2"></div>
+			</div>
+			<h3>Create new Product</h3>
+			<div class="ui-g">
+				<div class="ui-g-2"></div>
+				<div class="ui-g-8">
+					<h:form id="add">
+						<h:panelGrid columns="3" cellpadding="5" style="margin: 0 auto;">
+							<p:outputLabel for="IdCode" value="IdCode" />
+							<p:inputText id="IdCode"
+								value="#{productController.product.idCode}" required="true" />
+							<p:message for="IdCode" />
+							
+							<p:outputLabel for="Title" value="Title" />
+							<p:inputText id="Title"
+								value="#{productController.product.title}" required="true" />
+							<p:message for="Title" />
+							
+							<p:outputLabel for="description" value="Description" />
+							<p:inputText id="description" value="#{productController.product.description}"
+								size="50" maxlength="50" required="true" />
+							<p:message for="description" />
+	
+							<p:outputLabel for="price" value="Price" />
+							<p:inputText id="price"
+								value="#{productController.product.price}" required="true" >
+							</p:inputText>
+							<p:message for="price" />
+
+							<p:commandLink id="ajax" action="#{productController.returnToHomePage()}" style="margin-right:20px;" ajax="false" immediate="true">
+					            <h:outputText value="Voltar"/>
+					        </p:commandLink>
+							<p:commandButton update="@form :products:productList"
+								value="Cadastrar" action="#{productController.add}"
+								rendered="#{!productController.isUpdate}">
+							</p:commandButton>
+							<p:commandButton update="@form :products:productList"
+								value="Atualizar" action="#{productController.update}"
+								rendered="#{productController.isUpdate}">
+							</p:commandButton>
+							<p:commandButton update="add"
+								value="Cancelar" action="#{productController.cancel}"
+								immediate="true">
+								<f:ajax render="add" resetValues="true"/>
+							</p:commandButton>
+						</h:panelGrid>
+						<!-- <h:messages errorStyle="color:red;margin:8px;"></h:messages> -->
+					</h:form>
+				</div>
+				<div class="ui-g-2"></div>
+			</div>
+		</p:outputPanel>
+	</h:body>
+</f:view>
+</html>

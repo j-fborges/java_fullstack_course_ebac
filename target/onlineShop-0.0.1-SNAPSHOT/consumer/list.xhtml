@@ -1,0 +1,171 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<h:outputStylesheet>
+            th, td {
+                text-align: center;
+            }
+
+            h3 {
+                margin-top: 0;
+                text-align: center;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                box-sizing: border-box;
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing: border-box;
+            }
+
+        </h:outputStylesheet>
+	</h:head>
+	<h:body>
+		<h:form id="menu">
+			<p:menubar>
+				<p:submenu label="Cadastro" icon="pi pi-fw pi-user">
+					<p:menuitem value="Consumer" icon="pi pi-fw pi-user-plus" action="#{indexController.redirectConsumer()}"/>
+					<p:menuitem value="Product" icon="pi pi-fw pi-inbox" action="#{indexController.redirectProduct()}"/>
+				</p:submenu>
+				<p:submenu label="Sale" icon="pi pi-fw pi-shopping-cart">
+					<p:menuitem value="Sale" icon="pi pi-fw pi-shopping-cart" action="#{indexController.redirectSale()}"/>
+				</p:submenu>
+			</p:menubar>
+		</h:form>
+		<p:outputPanel>
+			<h3>Consumers registered</h3>
+			<div class="ui-g">
+				<div class="ui-g-2" />
+				<div class="ui-g-12">
+					<h:form id="customers">
+						<p:growl id="growl" sticky="true" />
+
+						<p:dataTable id="customerList" var="customer"
+							value="#{consumerController.consumers}">
+							<p:column headerText="Id">
+								<h:outputText value="#{customer.idNumber}" />
+							</p:column>
+
+							<p:column headerText="Name">
+								<h:outputText id="nameInput" value="#{customer.name}" />
+							</p:column>
+
+							<p:column headerText="Telefone">
+								<h:outputText id="telInput" value="#{customer.tel}" />
+							</p:column>
+
+							<p:column headerText="Email">
+								<h:outputText id="emailInput" value="#{customer.email}" />
+							</p:column>
+
+							<p:column>
+								<p:commandButton update="customerList add" value="Edit"
+									icon="ui-icon-closethick"
+									action="#{consumerController.edit(customer)}"
+									styleClass="ui-icon-pencil">
+								</p:commandButton>
+							</p:column>
+							<p:column>
+								<p:commandButton update="customerList" value="Delete"
+									icon="ui-icon-closethick"
+									action="#{consumerController.delete(customer)}"
+									styleClass="ui-priority-primary">
+									<p:confirm header="Atenção" message="Tem certeza que deseja excluir este consumer?" icon="pi pi-exclamation-triangle"/>
+								</p:commandButton>
+							</p:column>
+						</p:dataTable>
+						<br />
+						<p:confirmDialog global="true" showEffect="fade" hideEffect="fade" responsive="true" width="350">
+				            <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no ui-button-flat"/>
+				            <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" />
+				        </p:confirmDialog>
+					</h:form>
+				</div>
+				<div class="ui-g-2"></div>
+			</div>
+			<h3>Create new consumer</h3>
+			<div class="ui-g">
+				<div class="ui-g-2"></div>
+				<div class="ui-g-8">
+					<h:form id="add">
+						<h:panelGrid columns="3" cellpadding="5" style="margin: 0 auto;">
+							<p:outputLabel for="Name" value="Name" />
+							<p:inputText id="Name"
+								value="#{consumerController.consumer.name}" required="true" />
+							<p:message for="Name" />
+							
+							<p:outputLabel for="idNumber" value="IdNumber" />
+							<p:inputMask id="idNumber" value="#{consumerController.idNumberMask}"
+								size="11" maxlength="14" required="true"
+								mask="999.999.999-99" validateMask="true" />
+							<p:message for="idNumber" />
+	
+							<p:outputLabel for="tel" value="Telefone" />
+							<p:inputMask id="tel"
+								value="#{consumerController.telMask}" required="true"
+								mask="(99) 99999-9999" validateMask="true">
+							</p:inputMask>
+							<p:message for="tel" />
+
+							<p:outputLabel for="email" value="E-Mail" />
+							<p:inputText id="email"
+								value="#{consumerController.consumer.email}" required="true"
+								validatorMessage="#{consumerController.consumer.email} não é válido">
+								<f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+							</p:inputText>
+							<p:message for="email" />
+							
+							<p:outputLabel for="address" value="Address" />
+							<p:inputText id="address"
+								value="#{consumerController.consumer.address}" required="true">
+							</p:inputText>
+							<p:message for="address" />
+							
+							<p:outputLabel for="addressNumber" value="Numero" />
+							<p:inputText id="addressNumber"
+								value="#{consumerController.consumer.addressNumber}" required="true">
+								<p:keyFilter mask="num" />
+							</p:inputText>
+							<p:message for="addressNumber" />
+							
+							<p:outputLabel for="city" value="City" />
+							<p:inputText id="city"
+								value="#{consumerController.consumer.city}" required="true" size="50">
+							</p:inputText>
+							<p:message for="city" />
+							
+							<p:outputLabel for="state" value="State" />
+							<p:inputText id="state"
+								value="#{consumerController.consumer.state}" required="true" size="50">
+							</p:inputText>
+							<p:message for="state" />
+
+							<p:commandLink id="ajax" action="#{consumerController.returnToHomePage()}" style="margin-right:20px;" ajax="false" immediate="true">
+					            <h:outputText value="Voltar"/>
+					        </p:commandLink>
+							<p:commandButton update="@form :customers:customerList"
+								value="Cadastrar" action="#{consumerController.add}"
+								raddressered="#{!consumerController.isUpdate}">
+							</p:commandButton>
+							<p:commandButton update="@form :customers:customerList"
+								value="Atualizar" action="#{consumerController.update}"
+								raddressered="#{consumerController.isUpdate}">
+							</p:commandButton>
+							<p:commandButton update="add"
+								value="Cancelar" action="#{consumerController.cancel}"
+								immediate="true">
+								<f:ajax raddresser="add" resetValues="true"/>
+							</p:commandButton>
+						</h:panelGrid>
+						<!-- <h:messages errorStyle="color:red;margin:8px;"></h:messages> -->
+					</h:form>
+				</div>
+				<div class="ui-g-2"></div>
+			</div>
+		</p:outputPanel>
+	</h:body>
+</f:view>
+</html>
