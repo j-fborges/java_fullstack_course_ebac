@@ -57,6 +57,7 @@ The branches are organized into orphan Exercise Branches ('exercicio_\*'), which
 | | | [`project_shoe_shop`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/project_shoe_shop) | **Project** | Full e-commerce shoe shop with product listing & shopping cart |
 | | | [`project_sports_store`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/project_sports_store) | **Project** | Sports retail store with inventory management |
 | **Java Core** | Basics | [`java_classes`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_classes) | Exercise | Class definition and object instantiation |
+| | IDE Setup | [`intelliJ_deploy`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/intelliJ_deploy) | Exercise | IntelliJ IDEA configuration and deployment |
 | | | [`java_operators`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_operators) | Exercise | Arithmetic, logical, and comparison operators |
 | | | [`java_conditional`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_conditional) | Exercise | If/else and switch conditional statements |
 | | | [`java_wrapper`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_wrapper) | Exercise | Wrapper classes and auto-boxing/unboxing |
@@ -78,11 +79,10 @@ The branches are organized into orphan Exercise Branches ('exercicio_\*'), which
 | | JPA/Hibernate | [`java_jpa`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_jpa) | Exercise | Java Persistence API fundamentals |
 | | | [`java_jpa2`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_jpa2) | Exercise | Advanced JPA and relationship mapping |
 | | | [`consumer_crud_hibernate`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/consumer_crud_hibernate) | Exercise | CRUD with Hibernate ORM framework |
-| | | [`consumer_crud_hibernate_tests`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/consumer_crud_hibernate_tests) | Exercise | Hibernate with unit and integration tests |
+| | | [`consumer_crud_hibernate_tests`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/consumer_crud_hibernate_tests) | **Project** | Hibernate with unit and integration tests |
 | | | [`consumer_crud_tests`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/consumer_crud_tests) | Exercise | Complete CRUD testing with mocks |
-| **Spring Boot Monolith** | Basics | [`java_springboot`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_springboot) | Exercise | Spring Boot REST API fundamentals |
-| | Legacy | [`java_wildfly_jsf`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_wildfly_jsf) | Exercise | WildFly application server with JavaServer Faces |
-| | IDE Setup | [`intelliJ_deploy`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/intelliJ_deploy) | Exercise | IntelliJ IDEA configuration and deployment |
+| **legacy Java web development** | Legacy | [`java_wildfly_jsf`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_wildfly_jsf) | **Project** | WildFly application server with JavaServer Faces |
+| **Spring Boot Monolith** | Basics | [`java_springboot`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_springboot) | **Project** | Spring Boot REST API fundamentals |
 | **Microservices** | Architecture | [`java_springboot_microservice_config_server`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_springboot_microservice_config_server) | **Project** | Spring Cloud Config Server for centralized configuration |
 | | Services | [`java_springboot_microservice_product_service`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_springboot_microservice_product_service) | **Project** | Product Microservice (CRUD operations) |
 | | | [`java_springboot_microservice_consumer_service`](https://github.com/j-fborges/java_fullstack_course_ebac/tree/java_springboot_microservice_consumer_service) | **Project** | Consumer/Customer Microservice |
